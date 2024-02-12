@@ -1,0 +1,29 @@
+@import "../../sass/variables.scss";
+@import "../../sass/helpers/functions.scss";
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $main-color;
+  color: $dark-color;
+  overflow: hidden;
+  padding-block: px_rem(8px);
+}
+
+.top-bar-text {
+  font-size: px_rem(14px);
+  text-transform: uppercase;
+  font-weight: 500;
+  white-space: nowrap;
+  animation: moveText 100s linear infinite;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

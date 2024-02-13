@@ -1,9 +1,6 @@
 @import "../../sass/variables.scss";
 @import "../../sass/helpers/functions.scss";
 .top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   background-color: $main-color;
   color: $dark-color;

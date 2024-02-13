@@ -1,0 +1,10 @@
+@import "../../sass/helpers/functions.scss";
+
+.navbar_container {
+  max-width: px_rem(1400px);
+  padding: px_rem(16px);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

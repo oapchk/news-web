@@ -1,0 +1,35 @@
+@import "../../sass/helpers/functions.scss";
+@import "../../sass/variables.scss";
+
+.search__box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#product-search {
+  padding-block: px_rem(10px);
+  padding-inline: 150px;
+  border: px_rem(1px) solid $dark-color;
+  border-radius: px_rem(25px);
+  outline: none;
+}
+
+#product-search::placeholder {
+  font-size: px_rem(18px);
+  color: $dark-color;
+  opacity: 0.5;
+  text-align: left;
+}
+
+.search__icon--search {
+  position: absolute;
+  cursor: pointer;
+  left: px_rem(20px);
+}
+.search__icon--close {
+  position: absolute;
+  cursor: pointer;
+  right: px_rem(20px);
+}

@@ -1,0 +1,15 @@
+@use "sass:map";
+@import "../variables.scss";
+
+@mixin media-q($bp) {
+  $width: map.get($breakpoints, $bp);
+
+  @if not map.has-key($breakpoints, $bp) {
+    @warn 'Klucza: #{$bp} nie ma w mapie breakpointów. Wybierz jeden z tych: xs, sm, md, lg, xl, xxl. Domyślnie ustawiam xs';
+    $width: xs;
+  }
+
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}

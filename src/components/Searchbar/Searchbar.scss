@@ -2,34 +2,43 @@
 @import "../../sass/variables.scss";
 
 .search__box {
+  width: 100%;
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  // flex-grow: 1;
+  // flex-shrink: 1;
+  // flex-basis: auto;
+  // padding-inline: px_rem(30px);
+  // margin-right: auto;
 }
 
 #product-search {
+  width: 80%;
   padding-block: px_rem(10px);
-  padding-inline: 150px;
-  border: px_rem(1px) solid $dark-color;
+  padding-left: px_rem(46px);
+  background-color: #f6f6f7;
   border-radius: px_rem(25px);
   outline: none;
+  border: none;
 }
 
 #product-search::placeholder {
+  width: 100%;
   font-size: px_rem(18px);
   color: $dark-color;
   opacity: 0.5;
-  text-align: left;
 }
 
 .search__icon--search {
   position: absolute;
   cursor: pointer;
-  left: px_rem(20px);
+  left: px_rem(16px);
+  opacity: 0.5;
 }
-.search__icon--close {
-  position: absolute;
-  cursor: pointer;
-  right: px_rem(20px);
-}
+// .search__icon--close {
+//   position: absolute;
+//   cursor: pointer;
+//   // left: px_rem(334px);
+//   opacity: 0.5;
+// }

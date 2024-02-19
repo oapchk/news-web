@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaSearch, FaTimes } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import "./Searchbar.scss";
 
 const Searchbar = () => {
@@ -9,24 +9,22 @@ const Searchbar = () => {
     setSearchVal(e.target.value);
   };
 
-  const handleClearBtn = () => {
-    setSearchVal("");
-  };
+  // const handleClearBtn = () => {
+  //   setSearchVal("");
+  // };
   return (
-    <div>
-      <div className="search__box">
-        <FaSearch className="search__icon--search" />
-        <label id="input-label"></label>
-        <input
-          onChange={handleInput}
-          value={searchVal}
-          type="text"
-          name="product-search"
-          id="product-search"
-          placeholder="Search articles..."
-        />
-        <FaTimes className="search__icon--close" onClick={handleClearBtn} />
-      </div>
+    <div className="search__box">
+      <FaSearch className="search__icon--search" />
+      {/* <FaTimes className="search__icon--close" onClick={handleClearBtn} /> */}
+      <label id="input-label"></label>
+      <input
+        onChange={handleInput}
+        value={searchVal}
+        type="text"
+        name="product-search"
+        id="product-search"
+        placeholder="Search articles..."
+      />
     </div>
   );
 };

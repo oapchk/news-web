@@ -5,6 +5,10 @@
   padding: px_rem(16px);
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
+}
+
+.navbar__logo {
+  margin-right: px_rem(64px);
 }

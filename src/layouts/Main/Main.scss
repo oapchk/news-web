@@ -1,0 +1,11 @@
+@import "../../sass/variables.scss";
+@import "../../sass/helpers/functions.scss";
+
+.main__container {
+  display: flex;
+  border-top: solid px_rem(2px) $dark-color;
+}
+
+.main__articles {
+  flex: 1;
+}

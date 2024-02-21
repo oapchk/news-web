@@ -2,10 +2,34 @@
 @import "../../sass/helpers/functions.scss";
 
 .main__container {
-  display: flex;
   border-top: solid px_rem(2px) $dark-color;
 }
 
 .main__articles {
   flex: 1;
+  border-inline: solid px_rem(2px) $dark-color;
+  padding: px_rem(32px) px_rem(16px);
+}
+
+.main__sidemenu {
+  padding-top: px_rem(32px);
+  flex: 0 0 15%;
+}
+.main__aside {
+  flex: 0 0 30%;
+}
+.main__inner {
+  max-width: px_rem(1400px);
+  margin: auto;
+  padding-inline: px_rem(16px);
+  display: flex;
+}
+
+.articles__date--big {
+  font-family: "Kalnia";
+  font-size: px_rem(116px);
+  font-weight: 400;
+}
+.sidemenu__item {
+  padding-bottom: px_rem(16px);
 }

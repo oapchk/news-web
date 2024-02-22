@@ -1,5 +1,7 @@
 import "./Main.scss";
 import { useState, useEffect } from "react";
+import { CiShare1 } from "react-icons/ci";
+import { IoIosAddCircleOutline } from "react-icons/io";
 
 const Main = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -48,27 +50,44 @@ const Main = () => {
           <p className="articles__date--small">{dayOfTheWeek},</p>
           <h1 className="articles__date--big">{monthAndDateNumber}</h1>
           <div className="article__main">
-            <img className="" />
+            <img className="img__main" />
             <div className="article__details">
-              <img className="article__author" />
-              <a href=""></a>
-              <a href=""></a>
+              <div className="article__details--author">
+                <img className="article__details--img" />
+                <p className="article__details--name">Cindy Clawford</p>
+              </div>
+
+              <div className="article__icons">
+                <a href="">
+                  <CiShare1 />
+                </a>
+                <a href="">
+                  <IoIosAddCircleOutline />
+                </a>
+              </div>
             </div>
-            <p className="">12 min</p>
-            <p className="">UX</p>
+            <div className="article__details--2ndline">
+              <p className="article__details--time">12 min read</p>
+              <p className="article__details--category">UX</p>
+            </div>
           </div>
-          <div className="">
-            <h2 className="">
+          <div className="article__shortcut">
+            <h2 className="article__hdl hdl">
               A Practical Guide To Designing For Colorblind People
             </h2>
-            <p className="">
+            <p className="article__lead">
               Color accessibility is more than just ticking boxes. Even with
               good contrast, some color palettes can make interfaces challenging
               for users. Here are some practical guidelines to ensure more
               inclusive design for colorblind people. An upcoming part of Smart
               Interface Design Patterns.
             </p>
-            <button className="">Read All</button>
+            <button className="btn--big">Read All</button>
+          </div>
+          <span className="line"></span>
+          <div className="article__details--2ndline">
+            <p className="article__details--time">9 min read</p>
+            <p className="article__details--category">CSS</p>
           </div>
         </div>
         <div className="main__aside"></div>

@@ -16,7 +16,7 @@
   flex: 0 0 15%;
 }
 .main__aside {
-  flex: 0 0 30%;
+  flex: 0 0 40%;
 }
 .main__inner {
   max-width: px_rem(1400px);
@@ -27,9 +27,71 @@
 
 .articles__date--big {
   font-family: "Kalnia";
-  font-size: px_rem(116px);
+  font-size: px_rem(96px);
   font-weight: 400;
 }
 .sidemenu__item {
   padding-bottom: px_rem(16px);
+}
+
+.img__main {
+  content: url("src/assets/colorblind_maps.png");
+  padding-bottom: px_rem(16px);
+}
+.article__details--img {
+  content: url("src/assets/author-1.jpg");
+  border-radius: 50%;
+  height: px_rem(36px);
+  margin-right: px_rem(8px);
+}
+.btn--big {
+  width: 100%;
+  background-color: transparent;
+  border: solid px_rem(1px) $dark-color;
+  border-radius: px-rem(25px);
+  padding-block: px_rem(8px);
+  font-weight: 600;
+  margin-bottom: px_rem(24px);
+}
+
+.article__hdl {
+  padding-bottom: px_rem(16px);
+}
+.article__lead {
+  padding-bottom: px_rem(16px);
+}
+.article__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: px_rem(4px);
+  &--category {
+    margin-left: px_rem(8px);
+  }
+  &--name {
+    font-weight: 600;
+    font-size: px_rem(14px);
+  }
+  &--2ndline {
+    display: flex;
+    font-size: px_rem(14px);
+    font-weight: 500;
+    opacity: 0.6;
+  }
+  &--author {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.article__icons {
+  font-size: px_rem(20px);
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: px_rem(1px);
+  margin-inline: auto;
+  background-color: $dark-color;
 }

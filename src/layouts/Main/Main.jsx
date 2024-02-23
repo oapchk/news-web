@@ -50,10 +50,10 @@ const Main = () => {
           <p className="articles__date--small">{dayOfTheWeek},</p>
           <h1 className="articles__date--big">{monthAndDateNumber}</h1>
           <div className="article__main">
-            <img className="img__main" />
+            <img className="img--main" />
             <div className="article__details">
               <div className="article__details--author">
-                <img className="article__details--img" />
+                <img className="article__details--img img__miniature" />
                 <p className="article__details--name">Cindy Clawford</p>
               </div>
 
@@ -85,10 +85,48 @@ const Main = () => {
             <button className="btn--big">Read All</button>
           </div>
           <span className="line"></span>
-          <div className="article__details--2ndline">
-            <p className="article__details--time">9 min read</p>
-            <p className="article__details--category">CSS</p>
+          <div className="articles__3boxes">
+            <div className="articles__3boxes--big">
+              <div className="article__details--2ndline">
+                <p className="article__details--time">9 min read</p>
+                <p className="article__details--category">Web Design</p>
+              </div>
+              <h4 className="articles__3boxes--title">
+                When Words Cannot Describe: Designing For AI Beyond
+                Conversational Interfaces
+              </h4>
+              <img className="img--small" />
+            </div>
+            <div className="articles__3boxes--small">
+              <div className="article__details--2ndline">
+                <p className="article__details--time">23 min read</p>
+                <p className="article__details--category">CSS</p>
+              </div>
+              <h4 className="articles__3boxes--title">
+                New CSS Viewport Units Do Not Solve The Classic Scrollbar
+                Problem
+              </h4>
+              <div className="article__details--author">
+                <img className="article__details--img--2 img__miniature" />
+                <p className="article__details--name">Cat Stevens</p>
+              </div>
+            </div>
+            <div className="articles__3boxes--small--2">
+              <div className="article__details--2ndline">
+                <p className="article__details--time">10 min read</p>
+                <p className="article__details--category">JavaScript</p>
+              </div>
+              <h4 className="articles__3boxes--title">
+                Vanilla JavaScript, Libraries, And The Quest For Stateful DOM
+                Rendering
+              </h4>
+              <div className="article__details--author">
+                <img className="article__details--img--3 img__miniature" />
+                <p className="article__details--name">Meowrilyn Monroe</p>
+              </div>
+            </div>
           </div>
+          <span className="line"></span>
         </div>
         <div className="main__aside"></div>
       </div>

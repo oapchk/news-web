@@ -68,7 +68,7 @@ const Main = () => {
             </div>
             <div className="article__details--2ndline">
               <p className="article__details--time">12 min read</p>
-              <p className="article__details--category">UX</p>
+              <p className="article__details--category">Accessibility</p>
             </div>
           </div>
           <div className="article__shortcut">
@@ -125,6 +125,24 @@ const Main = () => {
                 <p className="article__details--name">Meowrilyn Monroe</p>
               </div>
             </div>
+          </div>
+          <span className="line"></span>
+          <div className="articles__1box">
+            <div className="articles__3boxes--small">
+              <div className="article__details--2ndline">
+                <p className="article__details--time">16 min read</p>
+                <p className="article__details--category">UX</p>
+              </div>
+              <h4 className="articles__3boxes--title">
+                Designing Navigation for Mobile: Design Patterns and Best
+                Practices
+              </h4>
+              <div className="article__details--author">
+                <img className="article__details--img--4 img__miniature" />
+                <p className="article__details--name">Clint Pawwood</p>
+              </div>
+            </div>
+            <img className="img--small--2" />
           </div>
           <span className="line"></span>
         </div>

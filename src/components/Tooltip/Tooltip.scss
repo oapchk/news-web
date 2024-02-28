@@ -1,0 +1,18 @@
+@import "../../sass/helpers/functions.scss";
+@import "../../sass/variables.scss";
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  font-size: px_rem(14px);
+  position: absolute;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: px_rem(8px);
+  border-radius: px_rem(4px);
+  transform: translateY(-200%);
+  left: px_rem(-10px);
+}

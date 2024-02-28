@@ -110,7 +110,10 @@
 }
 
 .article__icons {
-  font-size: px_rem(20px);
+  font-size: px_rem(24px);
+  a:first-child {
+    padding-right: px_rem(12px);
+  }
 }
 
 .line {

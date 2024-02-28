@@ -1,7 +1,8 @@
 import "./Main.scss";
 import { useState, useEffect } from "react";
-import { CiShare1 } from "react-icons/ci";
+import { CiShare2 } from "react-icons/ci";
 import { IoIosAddCircleOutline } from "react-icons/io";
+import Tooltip from "../../components/Tooltip/Tooltip";
 
 const Main = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -59,10 +60,14 @@ const Main = () => {
 
               <div className="article__icons">
                 <a href="">
-                  <CiShare1 />
+                  <Tooltip text={"Share"}>
+                    <CiShare2 />
+                  </Tooltip>
                 </a>
                 <a href="">
-                  <IoIosAddCircleOutline />
+                  <Tooltip text={"Save"}>
+                    <IoIosAddCircleOutline />
+                  </Tooltip>
                 </a>
               </div>
             </div>

@@ -6,7 +6,7 @@
 }
 
 .main__articles {
-  flex: 1;
+  // flex: 1;
   border-inline: solid px_rem(2px) $dark-color;
   padding: px_rem(32px) px_rem(16px);
 }
@@ -16,10 +16,10 @@
   flex: 0 0 15%;
 }
 .main__aside {
-  flex: 0 0 40%;
+  flex: 0 0 30%;
 }
 .main__inner {
-  max-width: px_rem(1400px);
+  max-width: px_rem(1300px);
   margin: auto;
   padding-inline: px_rem(16px);
   display: flex;

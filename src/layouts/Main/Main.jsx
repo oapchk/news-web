@@ -54,7 +54,7 @@ const Main = () => {
             <img className="img--main" />
             <div className="article__details">
               <div className="article__details--author">
-                <img className="article__details--img img__miniature" />
+                <img className="article__details--img img--miniature" />
                 <p className="article__details--name">Cindy Clawford</p>
               </div>
 
@@ -87,7 +87,7 @@ const Main = () => {
               inclusive design for colorblind people. An upcoming part of Smart
               Interface Design Patterns.
             </p>
-            <button className="btn--big">Read All</button>
+            <button className="btn--big btn">Read All</button>
           </div>
           <span className="line"></span>
           <div className="articles__3boxes">
@@ -112,7 +112,7 @@ const Main = () => {
                 Problem
               </h4>
               <div className="article__details--author">
-                <img className="article__details--img--2 img__miniature" />
+                <img className="article__details--img--2 img--miniature" />
                 <p className="article__details--name">Cat Stevens</p>
               </div>
             </div>
@@ -126,7 +126,7 @@ const Main = () => {
                 Rendering
               </h4>
               <div className="article__details--author">
-                <img className="article__details--img--3 img__miniature" />
+                <img className="article__details--img--3 img--miniature" />
                 <p className="article__details--name">Meowrilyn Monroe</p>
               </div>
             </div>
@@ -143,7 +143,7 @@ const Main = () => {
                 Practices
               </h4>
               <div className="article__details--author">
-                <img className="article__details--img--4 img__miniature" />
+                <img className="article__details--img--4 img--miniature" />
                 <p className="article__details--name">Clint Pawwood</p>
               </div>
             </div>
@@ -151,7 +151,69 @@ const Main = () => {
           </div>
           <span className="line"></span>
         </div>
-        <div className="main__aside"></div>
+        <div className="main__aside aside">
+          <div className="aside__trending">
+            <div className="aside__heading">
+              <p className="">Trending</p>
+              <span className="trending_light"></span>
+              <button className="btn--small btn">View all</button>
+            </div>
+
+            <div className="aside__titles">
+              <h3 className="articles__3boxes--title">
+                The Guide to BEM & SCSS: Writing Clean, Structured, and Slightly
+                Sassier Stylesheets
+              </h3>
+              <div className="article__details--2ndline">
+                <p className="article__details--time">12 min read</p>
+                <p className="article__details--category">CSS</p>
+              </div>
+              <span className="line"></span>
+              <h3 className="articles__3boxes--title">
+                Mastering JSX: Unveiling the Secrets for JavaScript, React, and
+                Frontend Brilliance
+              </h3>
+              <div className="article__details--2ndline">
+                <p className="article__details--time">9 min read</p>
+                <p className="article__details--category">JavaScript</p>
+              </div>
+              <span className="line"></span>
+              <h3 className="articles__3boxes--title">
+                Drive Success and Avoid Costly Mistakes By Getting Your UX
+                Research Right!
+              </h3>
+              <div className="article__details--2ndline">
+                <p className="article__details--time">7 min read</p>
+                <p className="article__details--category">UX</p>
+              </div>
+            </div>
+            <p className="authors__heading">Our authors</p>
+            <div className="aside__authors">
+              <div className="author__details">
+                <img className="article__details--img--5 img--bigger" />
+                <p className="article__details--name">
+                  Meowrold Schwarzenegger
+                </p>
+                <p className="article__details--role">Tech author</p>
+              </div>
+              <div className="author__details">
+                <img className="article__details--img--6 img--bigger" />
+                <p className="article__details--name">Purrrincess Grace</p>
+                <p className="article__details--role">UX Designer</p>
+              </div>
+              <div className="author__details">
+                <img className="article__details--img--7 img--bigger" />
+                <p className="article__details--name">Humphrey Catgart</p>
+                <p className="article__details--role">Art Director</p>
+              </div>
+              <div className="author__details">
+                <img className="article__details--img--8 img--bigger" />
+                <p className="article__details--name">Purrbara Streisand</p>
+                <p className="article__details--role">Marketing</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

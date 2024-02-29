@@ -59,20 +59,43 @@
   &--4 {
     content: url("src/assets/author-4.jpg");
   }
+  &--5 {
+    content: url("src/assets/author-5.jpg");
+  }
+  &--6 {
+    content: url("src/assets/author-6.jpg");
+  }
+  &--7 {
+    content: url("src/assets/author-7.jpg");
+  }
+  &--8 {
+    content: url("src/assets/author-8.jpg");
+  }
 }
-.img__miniature {
-  border-radius: 50%;
-  height: px_rem(36px);
-  margin-right: px_rem(8px);
+.img {
+  &--miniature {
+    border-radius: 50%;
+    height: px_rem(36px);
+    margin-right: px_rem(8px);
+  }
+  &--bigger {
+    border-radius: 50%;
+    height: px_rem(74px);
+  }
 }
-.btn--big {
-  width: 100%;
+.btn {
   background-color: transparent;
   border: solid px_rem(1px) $dark-color;
   border-radius: px-rem(25px);
   padding-block: px_rem(8px);
   font-weight: 600;
-  margin-bottom: px_rem(24px);
+  &--big {
+    width: 100%;
+    margin-bottom: px_rem(24px);
+  }
+  &--small {
+    padding-inline: px_rem(24px);
+  }
 }
 
 .article__hdl,
@@ -85,6 +108,10 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: px_rem(4px);
+  &--role {
+    opacity: 0.6;
+    font-size: px_rem(12px);
+  }
   &--time {
     opacity: 0.6;
   }
@@ -153,4 +180,61 @@
   align-items: center;
   gap: px_rem(24px);
   margin-bottom: px_rem(24px);
+}
+
+.main__aside {
+  padding: px_rem(32px) px_rem(16px);
+}
+.aside__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: px_rem(16px);
+}
+.aside__titles {
+  margin-bottom: px_rem(32px);
+}
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 #0eb651;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0.6rem rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.trending_light {
+  margin-left: px_rem(24px);
+  margin-right: auto;
+  transform: scale(1);
+  width: px_rem(10px);
+  height: px_rem(10px);
+  border-radius: 50%;
+  background: #0eb651;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 1);
+  animation: pulse-ring 2s infinite;
+}
+
+.aside__authors {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: px_rem(16px);
+}
+
+.author__details {
+  text-align: center;
+  width: 25%;
+}
+
+.authors__heading {
+  padding-bottom: px_rem(16px);
 }

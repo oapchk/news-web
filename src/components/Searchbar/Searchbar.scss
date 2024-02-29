@@ -18,10 +18,10 @@
   width: 80%;
   padding-block: px_rem(10px);
   padding-left: px_rem(46px);
-  background-color: #f6f6f7;
+  // background-color: #f6f6f7;
   border-radius: px_rem(25px);
   outline: none;
-  border: none;
+  border: solid px_rem(1px) $dark-color;
 }
 
 #product-search::placeholder {

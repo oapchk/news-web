@@ -213,6 +213,44 @@ const Main = () => {
               </div>
             </div>
           </div>
+          <div className="aside__subscribe">
+            <h2 className="subscribe__box--title">
+              Learn something new every day
+            </h2>
+            <p className="subscribe__box--lead">
+              Get the latest updates on our magazine, featuring new and
+              underrated ideas to improve the world.
+            </p>
+            <button className="btn--black btn">Subscribe</button>
+          </div>
+          <div className="aside__titles">
+            <h3 className="articles__3boxes--title">
+              The Guide to BEM & SCSS: Writing Clean, Structured, and Slightly
+              Sassier Stylesheets
+            </h3>
+            <div className="article__details--2ndline">
+              <p className="article__details--time">12 min read</p>
+              <p className="article__details--category">CSS</p>
+            </div>
+            <span className="line"></span>
+            <h3 className="articles__3boxes--title">
+              Mastering JSX: Unveiling the Secrets for JavaScript, React, and
+              Frontend Brilliance
+            </h3>
+            <div className="article__details--2ndline">
+              <p className="article__details--time">9 min read</p>
+              <p className="article__details--category">JavaScript</p>
+            </div>
+            <span className="line"></span>
+            <h3 className="articles__3boxes--title">
+              Drive Success and Avoid Costly Mistakes By Getting Your UX
+              Research Right!
+            </h3>
+            <div className="article__details--2ndline">
+              <p className="article__details--time">7 min read</p>
+              <p className="article__details--category">UX</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

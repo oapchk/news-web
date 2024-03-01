@@ -10,92 +10,10 @@
   border-inline: solid px_rem(2px) $dark-color;
   padding: px_rem(32px) px_rem(16px);
 }
-
-.main__sidemenu {
-  padding-top: px_rem(32px);
-  flex: 0 0 15%;
-}
-.main__aside {
-  flex: 0 0 30%;
-}
-.main__inner {
-  max-width: px_rem(1300px);
-  margin: auto;
-  padding-inline: px_rem(16px);
-  display: flex;
-}
-
 .articles__date--big {
   font-family: "Kalnia";
   font-size: px_rem(96px);
   font-weight: 400;
-}
-.sidemenu__item {
-  padding-bottom: px_rem(16px);
-}
-
-.img {
-  &--small {
-    content: url("src/assets/abstraction-sketchpad-n.png");
-    &--2 {
-      content: url("src/assets/3screens.png");
-      width: 30%;
-    }
-  }
-  &--main {
-    content: url("src/assets/colorblind_maps.png");
-    padding-bottom: px_rem(16px);
-  }
-}
-.article__details--img {
-  content: url("src/assets/author-1.jpg");
-
-  &--2 {
-    content: url("src/assets/author-2.jpg");
-  }
-  &--3 {
-    content: url("src/assets/author-3.jpg");
-  }
-  &--4 {
-    content: url("src/assets/author-4.jpg");
-  }
-  &--5 {
-    content: url("src/assets/author-5.jpg");
-  }
-  &--6 {
-    content: url("src/assets/author-6.jpg");
-  }
-  &--7 {
-    content: url("src/assets/author-7.jpg");
-  }
-  &--8 {
-    content: url("src/assets/author-8.jpg");
-  }
-}
-.img {
-  &--miniature {
-    border-radius: 50%;
-    height: px_rem(36px);
-    margin-right: px_rem(8px);
-  }
-  &--bigger {
-    border-radius: 50%;
-    height: px_rem(74px);
-  }
-}
-.btn {
-  background-color: transparent;
-  border: solid px_rem(1px) $dark-color;
-  border-radius: px-rem(25px);
-  padding-block: px_rem(8px);
-  font-weight: 600;
-  &--big {
-    width: 100%;
-    margin-bottom: px_rem(24px);
-  }
-  &--small {
-    padding-inline: px_rem(24px);
-  }
 }
 
 .article__hdl,
@@ -142,6 +60,97 @@
     padding-right: px_rem(12px);
   }
 }
+.article__details--img {
+  content: url("src/assets/author-1.jpg");
+
+  &--2 {
+    content: url("src/assets/author-2.jpg");
+  }
+  &--3 {
+    content: url("src/assets/author-3.jpg");
+  }
+  &--4 {
+    content: url("src/assets/author-4.jpg");
+  }
+  &--5 {
+    content: url("src/assets/author-5.jpg");
+  }
+  &--6 {
+    content: url("src/assets/author-6.jpg");
+  }
+  &--7 {
+    content: url("src/assets/author-7.jpg");
+  }
+  &--8 {
+    content: url("src/assets/author-8.jpg");
+  }
+}
+.main__sidemenu {
+  padding-top: px_rem(32px);
+  flex: 0 0 15%;
+}
+.main__aside {
+  flex: 0 0 30%;
+  padding: px_rem(32px) px_rem(16px);
+}
+
+.main__inner {
+  max-width: px_rem(1300px);
+  margin: auto;
+  padding-inline: px_rem(16px);
+  display: flex;
+}
+
+.sidemenu__item {
+  padding-bottom: px_rem(16px);
+}
+
+.img {
+  &--small {
+    content: url("src/assets/abstraction-sketchpad-n.png");
+    &--2 {
+      content: url("src/assets/3screens.png");
+      width: 30%;
+    }
+  }
+  &--main {
+    content: url("src/assets/colorblind_maps.png");
+    padding-bottom: px_rem(16px);
+  }
+}
+
+.img {
+  &--miniature {
+    border-radius: 50%;
+    height: px_rem(36px);
+    margin-right: px_rem(8px);
+  }
+  &--bigger {
+    border-radius: 50%;
+    height: px_rem(74px);
+  }
+}
+.btn {
+  background-color: transparent;
+  border: solid px_rem(1px) $dark-color;
+  border-radius: px-rem(25px);
+  padding-block: px_rem(8px);
+  font-weight: 600;
+  &--black {
+    color: white;
+    padding-inline: px_rem(32px);
+    background-color: #000;
+    display: block;
+    margin: 0 auto;
+  }
+  &--big {
+    width: 100%;
+    margin-bottom: px_rem(24px);
+  }
+  &--small {
+    padding-inline: px_rem(24px);
+  }
+}
 
 .line {
   display: block;
@@ -182,8 +191,8 @@
   margin-bottom: px_rem(24px);
 }
 
-.main__aside {
-  padding: px_rem(32px) px_rem(16px);
+.aside__trending {
+  padding-bottom: px_rem(32px);
 }
 .aside__heading {
   display: flex;
@@ -237,4 +246,40 @@
 
 .authors__heading {
   padding-bottom: px_rem(16px);
+}
+
+.aside__subscribe {
+  padding: px_rem(50px);
+  background-color: #f97d36;
+  --mask: linear-gradient(#000 0 0) 50% / calc(100% - 40px) calc(100% - 40px)
+      no-repeat,
+    radial-gradient(20px, #0000 98%, #000) 0 -20px/37px 40px round no-repeat,
+    radial-gradient(20px, #0000 98%, #000) 0 calc(100% + 20px) / 37px 40px round
+      no-repeat,
+    radial-gradient(20px, #0000 98%, #000) -20px 0/40px 37px no-repeat round,
+    radial-gradient(20px, #0000 98%, #000) calc(100% + 20px) 0/40px 37px
+      no-repeat round;
+  clip-path: polygon(
+    40px 0,
+    calc(100% - 40px) 0,
+    100% 40px,
+    100% calc(100% - 40px),
+    calc(100% - 40px) 100%,
+    40px 100%,
+    0 calc(100% - 40px),
+    0 40px
+  );
+  mask: var(--mask);
+}
+
+.subscribe__box {
+  &--title {
+    font-family: "serif";
+    text-transform: uppercase;
+    font-size: px_rem(32px);
+    padding-bottom: px_rem(16px);
+  }
+  &--lead {
+    padding-bottom: px_rem(24px);
+  }
 }

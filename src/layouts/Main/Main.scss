@@ -6,13 +6,12 @@
 }
 
 .main__articles {
-  // flex: 1;
   border-inline: solid px_rem(2px) $dark-color;
-  padding: px_rem(32px) px_rem(16px);
+  padding: px_rem(32px) px_rem(16px) 0 px_rem(16px);
 }
 .articles__date--big {
   font-family: "Kalnia";
-  font-size: px_rem(96px);
+  font-size: px_rem(98px);
   font-weight: 400;
 }
 
@@ -91,7 +90,7 @@
 }
 .main__aside {
   flex: 0 0 30%;
-  padding: px_rem(32px) px_rem(16px);
+  padding: px_rem(32px) px_rem(16px) 0 px_rem(16px);
 }
 
 .main__inner {
@@ -159,7 +158,14 @@
   background-color: $dark-color;
   margin-bottom: px_rem(24px);
 }
-
+.line--last {
+  display: block;
+  height: px_rem(2px);
+  background-color: $dark-color;
+  width: px_rem(1300px);
+  margin-inline: auto;
+  margin-bottom: px_rem(32px);
+}
 .articles__3boxes {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -201,7 +207,7 @@
   margin-bottom: px_rem(16px);
 }
 .aside__titles {
-  margin-bottom: px_rem(32px);
+  margin-bottom: px_rem(24px);
 }
 @keyframes pulse-ring {
   0% {
@@ -249,6 +255,7 @@
 }
 
 .aside__subscribe {
+  margin-bottom: px_rem(32px);
   padding: px_rem(50px);
   background-color: #f97d36;
   --mask: linear-gradient(#000 0 0) 50% / calc(100% - 40px) calc(100% - 40px)
@@ -281,5 +288,51 @@
   }
   &--lead {
     padding-bottom: px_rem(24px);
+  }
+}
+
+.second__container {
+  width: px_rem(1300px);
+  margin-inline: auto;
+  padding-inline: px_rem(16px);
+  &__title {
+    padding-left: px_rem(216px);
+    font-size: px_rem(44px);
+  }
+  &__sidebar {
+    flex: 0 0 15%;
+  }
+  h2 {
+    line-height: 1;
+    padding-bottom: px_rem(32px);
+  }
+  &__heading {
+    font-size: px_rem(24px);
+    margin-bottom: px_rem(16px);
+  }
+  img {
+    border-radius: px_rem(4px);
+    width: px_rem(340px);
+  }
+  &__img {
+    &--1 {
+      content: url("src/assets/img1.png");
+    }
+    &--2 {
+      width: px_rem(340px);
+      content: url("src/assets/img2.png");
+    }
+    &--3 {
+      width: px_rem(340px);
+      content: url("src/assets/img3.png");
+    }
+  }
+  &__article {
+    display: flex;
+    gap: px_rem(24px);
+    padding-bottom: px_rem(24px);
+  }
+  &__lead {
+    font-size: px_rem(16px);
   }
 }

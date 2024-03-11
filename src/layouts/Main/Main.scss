@@ -2,11 +2,11 @@
 @import "../../sass/helpers/functions.scss";
 
 .main__container {
-  border-top: solid px_rem(2px) $dark-color;
+  border-top: solid px_rem(2px) var(--text-primary);
 }
 
 .main__articles {
-  border-inline: solid px_rem(2px) $dark-color;
+  border-inline: solid px_rem(2px) var(--text-primary);
   padding: px_rem(32px) px_rem(16px) 0 px_rem(16px);
 }
 .articles__date--big {
@@ -34,7 +34,7 @@
   }
   &--category {
     margin-left: px_rem(8px);
-    color: $blue-color;
+    color: var(--text-secondary);
     font-weight: 800;
   }
   &--name {
@@ -131,7 +131,7 @@
 }
 .btn {
   background-color: transparent;
-  border: solid px_rem(1px) $dark-color;
+  border: solid px_rem(1px) var(--text-primary);
   border-radius: px-rem(25px);
   padding-block: px_rem(8px);
   font-weight: 600;
@@ -155,13 +155,13 @@
   display: block;
   width: 100%;
   height: px_rem(1px);
-  background-color: $dark-color;
+  background-color: var(--text-primary);
   margin-bottom: px_rem(24px);
 }
 .line--last {
   display: block;
   height: px_rem(2px);
-  background-color: $dark-color;
+  background-color: var(--text-primary);
   width: px_rem(1300px);
   margin-inline: auto;
   margin-bottom: px_rem(32px);
@@ -257,7 +257,7 @@
 .aside__subscribe {
   margin-bottom: px_rem(32px);
   padding: px_rem(50px);
-  background-color: #f97d36;
+  background-color: var(--accent);
   --mask: linear-gradient(#000 0 0) 50% / calc(100% - 40px) calc(100% - 40px)
       no-repeat,
     radial-gradient(20px, #0000 98%, #000) 0 -20px/37px 40px round no-repeat,

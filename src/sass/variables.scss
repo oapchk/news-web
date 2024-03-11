@@ -1,12 +1,26 @@
 //COLORS
+:root {
+  --background: #fff;
+  --bgtop: #616cd0;
+  --text-primary: #000;
+  --text-secondary: #0000f7;
+  --accent: #f97d36;
+}
+[data-theme="dark"] {
+  --background: #292929;
+  --bgtop: #616cd0;
+  --text-primary: #fff;
+  --text-secondary: #0000f7;
+  --accent: #f97d36;
+}
 
-$main-color: #616cd0;
-$accent-color: #f97d36;
+// $main-color: #616cd0;
+// $accent-color: #f97d36;
 
-$light-color: #e1e2f3;
-$dark-color: #141414;
-$gray-color: #8d8fa1;
-$blue-color: #0000f7;
+// $light-color: #e1e2f3;
+// $dark-color: #141414;
+// $gray-color: #8d8fa1;
+// $blue-color: #0000f7;
 
 // FONTS
 $base-font-size: 16px;

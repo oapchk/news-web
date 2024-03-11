@@ -21,13 +21,13 @@
   // background-color: #f6f6f7;
   border-radius: px_rem(25px);
   outline: none;
-  border: solid px_rem(1px) $dark-color;
+  border: solid px_rem(1px) var(--text-primary);
 }
 
 #product-search::placeholder {
   width: 100%;
   font-size: px_rem(18px);
-  color: $dark-color;
+  color: var(--text-primary);
   opacity: 0.5;
 }
 

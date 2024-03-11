@@ -1,7 +1,10 @@
 import "./Navbar.scss";
 import Searchbar from "../../components/Searchbar/Searchbar";
 import { FaRegUser, FaRegSun, FaRegMoon } from "react-icons/fa";
+import { useTheme } from "../../context/ThemeContext";
 const Navbar = () => {
+  const { isDarkMode, toggleTheme } = useTheme("");
+
   return (
     <div className="navbar_container">
       <div className="navbar__logo">
@@ -17,9 +20,8 @@ const Navbar = () => {
         </a>
       </div>
       <div className="navbar_mode">
-        <a href="" className="navbar__item">
-          <FaRegSun />
-          <FaRegMoon />
+        <a href="" className="navbar__item" onClick={toggleTheme}>
+          {isDarkMode ? <FaRegSun /> : <FaRegMoon />}
         </a>
       </div>
       {/* </div> */}

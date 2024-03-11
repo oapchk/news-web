@@ -2,8 +2,8 @@
 @import "../../sass/helpers/functions.scss";
 .top-bar {
   width: 100%;
-  background-color: $main-color;
-  color: $dark-color;
+  background-color: var(--bgtop);
+  color: var(--text-primary);
   overflow: hidden;
   padding-block: px_rem(8px);
 }

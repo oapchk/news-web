@@ -26,9 +26,9 @@ const Main = () => {
   });
   return (
     <>
-      <div className={`main__container  ${theme}`}>
-        <div className={`main__inner ${theme}`}>
-          <div className={`main__sidemenu ${theme}`}>
+      <div className={`main__container`} data-theme={theme}>
+        <div className="main__inner">
+          <div className="main__sidemenu">
             <ul className="sidemenu__items">
               <li className="sidemenu__item">
                 <a href="">All</a>
@@ -50,7 +50,7 @@ const Main = () => {
               </li>
             </ul>
           </div>
-          <div className="main__articles">
+          <div className={`main__articles ${theme}`}>
             <p className="articles__date--small">{dayOfTheWeek},</p>
             <h1 className="articles__date--big">{monthAndDateNumber}</h1>
             <div className="article__main">

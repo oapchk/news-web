@@ -8,7 +8,8 @@ const Tooltip = ({ text, children }) => {
 
   return (
     <div
-      className={`tooltip-container ${theme}`}
+      className={`tooltip-container`}
+      data-theme={theme}
       onMouseEnter={() => setIsVisible(true)}
       onMouseLeave={() => setIsVisible(false)}
     >

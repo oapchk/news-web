@@ -8,7 +8,7 @@ const Hellobar = () => {
   const repeatedText = text.repeat(50);
 
   return (
-    <div className={`top-bar ${theme}`}>
+    <div className={`top-bar`} data-theme={theme}>
       <div className="top-bar-text">{repeatedText}</div>
     </div>
   );

@@ -15,7 +15,7 @@ const Searchbar = () => {
   //   setSearchVal("");
   // };
   return (
-    <div className={`search__box  ${theme}`}>
+    <div className={`search__box`} data-theme={theme}>
       <FaSearch className="search__icon--search" />
       {/* <FaTimes className="search__icon--close" onClick={handleClearBtn} /> */}
       <label id="input-label"></label>

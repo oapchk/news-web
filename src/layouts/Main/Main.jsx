@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 import { CiShare2 } from "react-icons/ci";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import Tooltip from "../../components/Tooltip/Tooltip";
+import { useTheme } from "../../context/ThemeContext";
 
 const Main = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
+  const { theme } = useTheme();
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -24,9 +26,9 @@ const Main = () => {
   });
   return (
     <>
-      <div className="main__container">
-        <div className="main__inner">
-          <div className="main__sidemenu">
+      <div className={`main__container  ${theme}`}>
+        <div className={`main__inner ${theme}`}>
+          <div className={`main__sidemenu ${theme}`}>
             <ul className="sidemenu__items">
               <li className="sidemenu__item">
                 <a href="">All</a>
@@ -259,7 +261,7 @@ const Main = () => {
         <span className="line--last"></span>
       </div>
 
-      <div className="second__container">
+      <div className={`second__container  ${theme}`}>
         <h2 className="second__container__title">All articles</h2>
         <div className="second__container__article">
           <div className="second__container__sidebar">

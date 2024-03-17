@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import "./Searchbar.scss";
+import { useTheme } from "../../context/ThemeContext";
 
 const Searchbar = () => {
   const [searchVal, setSearchVal] = useState("");
+  const { theme } = useTheme();
 
   const handleInput = (e) => {
     setSearchVal(e.target.value);
@@ -13,7 +15,7 @@ const Searchbar = () => {
   //   setSearchVal("");
   // };
   return (
-    <div className="search__box">
+    <div className={`search__box  ${theme}`}>
       <FaSearch className="search__icon--search" />
       {/* <FaTimes className="search__icon--close" onClick={handleClearBtn} /> */}
       <label id="input-label"></label>

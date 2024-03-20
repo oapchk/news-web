@@ -1,16 +1,27 @@
 @import "../../sass/helpers/functions.scss";
 @import "../../sass/variables.scss";
 @import "../../App.scss";
+@import "../../sass/helpers/mixins.scss";
 
 .navbar_container {
   max-width: px_rem(1300px);
   padding: px_rem(16px);
   margin: auto;
   display: flex;
-  // justify-content: space-between;
   align-items: center;
+  @include media-q(sm) {
+    flex-wrap: wrap;
+  }
 }
 
 .navbar__logo {
   margin-right: px_rem(64px);
+}
+
+.navbar__item {
+  border: none;
+  padding-left: px_rem(8px);
+  @include media-q(sm) {
+    justify-content: flex-end;
+  }
 }

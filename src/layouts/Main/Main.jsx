@@ -34,7 +34,7 @@ const Main = () => {
                 <a href="">All</a>
               </li>
               <li className="sidemenu__item">
-                <a href="">Web Design</a>
+                <a href="">WebDesign</a>
               </li>
               <li className="sidemenu__item">
                 <a href="">UX</a>
@@ -261,7 +261,7 @@ const Main = () => {
         <span className="line--last"></span>
       </div>
 
-      <div className={`second__container  ${theme}`}>
+      <div className="second__container">
         <h2 className="second__container__title">All articles</h2>
         <div className="second__container__article">
           <div className="second__container__sidebar">

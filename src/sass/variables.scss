@@ -2,17 +2,19 @@
 #root,
 [data-theme="light"] {
   --background: #fff;
-  --bgtop: #616cd0;
+  --bgtop: #d0ff91;
+  --bg-search: #f6f6f7;
   --text-primary: #000;
   --text-secondary: #0000f7;
   --accent: #f97d36;
 }
 [data-theme="dark"] {
   --background: #292929;
-  --bgtop: green;
+  --bgtop: #616cd0;
+  --bg-search: #3a3b3d;
   --text-primary: #fff;
-  --text-secondary: ##6b8afd;
-  --accent: #f97d36;
+  --text-secondary: #f97d36;
+  --accent: #48494b;
 }
 
 // $main-color: #616cd0;
@@ -29,7 +31,6 @@ $base-font-size: 16px;
 //BREAKPOINTS
 
 $breakpoints: (
-  xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,

@@ -1,33 +1,33 @@
 @import "../../sass/helpers/functions.scss";
 @import "../../sass/variables.scss";
-
+@import "../../sass/helpers/mixins.scss";
 .search__box {
   width: 100%;
   position: relative;
   display: flex;
   align-items: center;
-
-  // flex-grow: 1;
-  // flex-shrink: 1;
-  // flex-basis: auto;
-  // padding-inline: px_rem(30px);
-  // margin-right: auto;
+  @include media-q(sm) {
+    padding-top: px_rem(16px);
+    order: 3;
+  }
 }
 
 #product-search {
   width: 80%;
   padding-block: px_rem(10px);
   padding-left: px_rem(46px);
-  // background-color: #f6f6f7;
+  background-color: var(--bg-search);
   border-radius: px_rem(25px);
-  outline: none;
-  border: solid px_rem(1px) var(--text-primary);
+  @include media-q(sm) {
+    width: 100%;
+  }
 }
 
 #product-search::placeholder {
   width: 100%;
-  font-size: px_rem(18px);
+  font-size: px_rem(14px);
   color: var(--text-primary);
+  font-weight: 300;
   opacity: 0.5;
 }
 
@@ -37,9 +37,3 @@
   left: px_rem(16px);
   opacity: 0.5;
 }
-// .search__icon--close {
-//   position: absolute;
-//   cursor: pointer;
-//   // left: px_rem(334px);
-//   opacity: 0.5;
-// }

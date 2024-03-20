@@ -2,6 +2,7 @@ import "./Navbar.scss";
 import Searchbar from "../../components/Searchbar/Searchbar";
 import { FaRegUser, FaRegSun, FaRegMoon } from "react-icons/fa";
 import { useTheme } from "../../context/ThemeContext";
+import Tooltip from "../../components/Tooltip/Tooltip";
 // import { useEffect } from "react";
 
 const Navbar = () => {
@@ -11,7 +12,7 @@ const Navbar = () => {
     toggleTheme();
   };
   return (
-    <nav className={`navbar_container ${theme}`}>
+    <nav className={`navbar_container`} data-theme={theme}>
       <div className="navbar__logo">
         <a href="" className="logo">
           Frontend.NEWS
@@ -19,13 +20,17 @@ const Navbar = () => {
       </div>
       <Searchbar />
       <div className="navbar_user">
-        <a href="" className="navbar__item">
-          <FaRegUser />
-        </a>
+        <button className="navbar__item">
+          <Tooltip text={"Sign In"}>
+            <FaRegUser />
+          </Tooltip>
+        </button>
       </div>
       <div className="navbar_mode">
         <button className="navbar__item" onClick={toggleMode}>
-          {theme === "light" ? <FaRegSun /> : <FaRegMoon />}
+          <Tooltip text={"Change theme"}>
+            {theme === "light" ? <FaRegSun /> : <FaRegMoon />}
+          </Tooltip>
         </button>
       </div>
     </nav>

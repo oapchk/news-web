@@ -50,7 +50,7 @@ const Main = () => {
               </li>
             </ul>
           </div>
-          <div className={`main__articles ${theme}`}>
+          <div className="main__articles">
             <p className="articles__date--small">{dayOfTheWeek},</p>
             <h1 className="articles__date--big">{monthAndDateNumber}</h1>
             <div className="article__main">
@@ -62,16 +62,16 @@ const Main = () => {
                 </div>
 
                 <div className="article__icons">
-                  <a href="">
+                  <button className="article__icons--btn">
                     <Tooltip text={"Share"}>
                       <CiShare2 />
                     </Tooltip>
-                  </a>
-                  <a href="">
+                  </button>
+                  <button className="article__icons--btn">
                     <Tooltip text={"Save"}>
                       <IoIosAddCircleOutline />
                     </Tooltip>
-                  </a>
+                  </button>
                 </div>
               </div>
               <div className="article__details--2ndline">
@@ -134,7 +134,7 @@ const Main = () => {
                 </div>
               </div>
             </div>
-            <span className="line"></span>
+            <span className="articles__3boxes--line line"></span>
             <div className="articles__1box">
               <div className="articles__3boxes--small">
                 <div className="article__details--2ndline">
@@ -152,7 +152,7 @@ const Main = () => {
               </div>
               <img className="img--small--2" />
             </div>
-            {/* <span className="line"></span> */}
+            <span className="articles__1box--line line"></span>
           </div>
           <div className="main__aside aside">
             <div className="aside__trending">
@@ -167,25 +167,25 @@ const Main = () => {
                   The Guide to BEM & SCSS: Writing Clean, Structured, and
                   Slightly Sassier Stylesheets
                 </h3>
-                <div className="article__details--2ndline">
+                <div className="article__details--2ndline details">
                   <p className="article__details--time">12 min read</p>
                   <p className="article__details--category">CSS</p>
                 </div>
-                <span className="line"></span>
+                <span className=" articles__3boxes--line line"></span>
                 <h3 className="articles__3boxes--title">
                   Mastering JSX: Unveiling the Secrets for JavaScript, React,
                   and Frontend Brilliance
                 </h3>
-                <div className="article__details--2ndline">
+                <div className="article__details--2ndline details">
                   <p className="article__details--time">9 min read</p>
                   <p className="article__details--category">JavaScript</p>
                 </div>
-                <span className="line"></span>
+                <span className="articles__3boxes--line line"></span>
                 <h3 className="articles__3boxes--title">
                   Drive Success and Avoid Costly Mistakes By Getting Your UX
                   Research Right!
                 </h3>
-                <div className="article__details--2ndline">
+                <div className="article__details--2ndline details">
                   <p className="article__details--time">7 min read</p>
                   <p className="article__details--category">UX</p>
                 </div>
@@ -233,25 +233,25 @@ const Main = () => {
                 The Guide to BEM & SCSS: Writing Clean, Structured, and Slightly
                 Sassier Stylesheets
               </h3>
-              <div className="article__details--2ndline">
+              <div className="article__details--2ndline details">
                 <p className="article__details--time">12 min read</p>
                 <p className="article__details--category">CSS</p>
               </div>
-              <span className="line"></span>
+              <span className="articles__3boxes--line line"></span>
               <h3 className="articles__3boxes--title">
                 Mastering JSX: Unveiling the Secrets for JavaScript, React, and
                 Frontend Brilliance
               </h3>
-              <div className="article__details--2ndline">
+              <div className="article__details--2ndline details">
                 <p className="article__details--time">9 min read</p>
                 <p className="article__details--category">JavaScript</p>
               </div>
-              <span className="line"></span>
+              <span className="articles__3boxes--line line"></span>
               <h3 className="articles__3boxes--title">
                 Drive Success and Avoid Costly Mistakes By Getting Your UX
                 Research Right!
               </h3>
-              <div className="article__details--2ndline">
+              <div className="article__details--2ndline details">
                 <p className="article__details--time">7 min read</p>
                 <p className="article__details--category">UX</p>
               </div>
@@ -261,7 +261,7 @@ const Main = () => {
         <span className="line--last"></span>
       </div>
 
-      <div className="second__container">
+      <div className={`second__container`} data-theme={theme}>
         <h2 className="second__container__title">All articles</h2>
         <div className="second__container__article">
           <div className="second__container__sidebar">
@@ -307,10 +307,7 @@ const Main = () => {
           </div>
           <img className="second__container__img--3" />
           <div className="second__container__heading">
-            <h2>
-              Progressive Web Apps (PWAs): Unlocking The Future of Mobile-First
-              Web Development
-            </h2>
+            <h2>Unlocking The Future of Mobile-First Web Development</h2>
             <p className="second__container__lead">
               As we move towards a new ‘mobile internet’, demanding consumers
               are constantly looking for new ways to improve their online
@@ -362,10 +359,7 @@ const Main = () => {
           </div>
           <img className="second__container__img--3" />
           <div className="second__container__heading">
-            <h2>
-              Progressive Web Apps (PWAs): Unlocking The Future of Mobile-First
-              Web Development
-            </h2>
+            <h2>Unlocking The Future of Mobile-First Web Development</h2>
             <p className="second__container__lead">
               As we move towards a new ‘mobile internet’, demanding consumers
               are constantly looking for new ways to improve their online

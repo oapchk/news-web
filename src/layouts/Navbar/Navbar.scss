@@ -21,6 +21,7 @@
 .navbar__item {
   border: none;
   padding-left: px_rem(8px);
+  font-size: px_rem(16px);
   @include media-q(sm) {
     justify-content: flex-end;
   }

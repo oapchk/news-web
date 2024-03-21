@@ -18,7 +18,7 @@
 }
 .articles__date--big {
   font-family: "Kalnia";
-  font-size: max(8vw, 52px);
+  font-size: max(6vw, 52px);
   font-weight: 400;
   // @include media-q(sm) {
   //   font-size: px_rem(62px);
@@ -64,6 +64,11 @@
 }
 
 .article__icons {
+  &--btn {
+    border: none;
+    padding-left: px_rem(8px);
+    font-size: px_rem(24px);
+  }
   font-size: px_rem(24px);
   a:first-child {
     padding-right: px_rem(12px);
@@ -138,6 +143,9 @@
 .img {
   &--small {
     content: url("src/assets/abstraction-sketchpad-n.png");
+    @include media-q(sm) {
+      width: 100%;
+    }
     &--2 {
       content: url("src/assets/3screens.png");
       width: 30%;
@@ -208,6 +216,11 @@
   grid-template-rows: auto auto;
   margin-bottom: px_rem(24px);
   gap: px_rem(24px);
+  &--line {
+    @include media-q(sm) {
+      display: none;
+    }
+  }
   @include media-q(sm) {
     display: flex;
     flex-direction: column;
@@ -235,6 +248,13 @@
   align-items: center;
   gap: px_rem(24px);
   margin-bottom: px_rem(24px);
+  &--line {
+    display: none;
+
+    @include media-q(lg) {
+      display: block;
+    }
+  }
 }
 
 .aside__trending {
@@ -335,11 +355,18 @@
   max-width: px_rem(1300px);
   margin-inline: auto;
   padding-inline: px_rem(16px);
+  @include media-q(sm) {
+    max-width: px_rem(430px);
+    display: grid;
+    gap: px_rem(16px);
+    grid-template-columns: 1fr;
+    padding-top: px_rem(16px);
+  }
   &__title {
     padding-left: px_rem(216px);
     font-size: px_rem(44px);
     @include media-q(sm) {
-      padding-left: 0;
+      display: none;
     }
   }
   &__sidebar {
@@ -353,12 +380,15 @@
     padding-bottom: px_rem(32px);
   }
   &__heading {
-    font-size: px_rem(24px);
+    font-size: max(3vw, px_rem(12px));
     margin-bottom: px_rem(16px);
   }
   img {
     border-radius: px_rem(4px);
     width: px_rem(340px);
+    @include media-q(sm) {
+      width: 50%;
+    }
   }
   &__img {
     &--1 {
@@ -378,11 +408,19 @@
     gap: px_rem(24px);
     padding-bottom: px_rem(24px);
     @include media-q(sm) {
-      flex-direction: column;
-      max-width: px_rem(430px);
+      background-color: var(--bg-search);
+      padding: px_rem(12px);
+      border-radius: px_rem(5px);
     }
   }
   &__lead {
     font-size: px_rem(16px);
+    @include media-q(sm) {
+      display: none;
+    }
   }
+}
+
+.details {
+  padding-bottom: px_rem(24px);
 }

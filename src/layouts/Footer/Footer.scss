@@ -1,0 +1,43 @@
+@import "../../sass/helpers/functions.scss";
+@import "../../sass/variables.scss";
+@import "../../sass/helpers/mixins.scss";
+
+.footer__header {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.footer__main {
+  padding: px_rem(16px);
+}
+.footer-mini-nav {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    padding-right: px_rem(30px);
+    padding-bottom: px_rem(10px);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
+
+.footer-social {
+  padding-bottom: px_rem(24px);
+
+  &__item {
+    padding-right: px_rem(16px);
+  }
+  &__list {
+    display: flex;
+    font-size: px_rem(18px);
+    color: var(--text-primary);
+    padding-block: px_rem(16px);
+  }
+}
+
+.footer-navigation {
+  &__item {
+    padding: px_rem(16px) 0;
+    border-bottom: px_rem(1px) solid rgba(#000000, 0.3);
+  }
+  padding-bottom: px_rem(24px);
+}

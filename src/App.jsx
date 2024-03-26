@@ -1,6 +1,7 @@
 import "./App.scss";
 import Hellobar from "./components/HelloBar/Hellobar";
 import { ThemeProvider } from "./context/ThemeContext";
+import Footer from "./layouts/Footer/Footer";
 import Main from "./layouts/Main/Main";
 import Navbar from "./layouts/Navbar/Navbar";
 import "./sass/variables.scss";
@@ -12,6 +13,7 @@ function App() {
         <Hellobar />
         <Navbar />
         <Main />
+        <Footer />
       </ThemeProvider>
     </>
   );

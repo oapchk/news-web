@@ -23,10 +23,11 @@ button {
 body {
   background-color: var(--background);
   color: var(--text-primary);
+  letter-spacing: px_rem(-0.2px);
 }
 a {
   text-decoration: none;
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 input {

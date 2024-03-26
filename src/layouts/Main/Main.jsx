@@ -270,7 +270,10 @@ const Main = () => {
           </div>
           <img className="second__container__img--1" />
           <div className="second__container__heading">
+            <p className="article__details--category category__listing">CSS</p>
+
             <h2>Modern CSS Tooltips And Speech Bubbles</h2>
+
             <p className="second__container__lead">
               Tooltips are a very common pattern used in CSS for years. There
               are a lot of ways to approach tooltips in CSS, though some evoke
@@ -284,10 +287,11 @@ const Main = () => {
         <div className="second__container__article">
           <div className="second__container__sidebar">
             {/* <p className="article__details--time">13 min read</p> */}
-            {/* <p className="article__details--category">UX</p> */}
           </div>
           <img className="second__container__img--2" />
           <div className="second__container__heading">
+            <p className="article__details--category category__listing">UX</p>
+
             <h2>How Conversational AI is upping UX and CX standards </h2>
             <p className="second__container__lead">
               Conversational AI is a revolutionary technology enabling people to
@@ -303,10 +307,13 @@ const Main = () => {
         <div className="second__container__article">
           <div className="second__container__sidebar">
             {/* <p className="article__details--time">18 min read</p> */}
-            {/* <p className="article__details--category">Web Design</p> */}
           </div>
           <img className="second__container__img--3" />
           <div className="second__container__heading">
+            <p className="article__details--category category__listing">
+              Web Design
+            </p>
+
             <h2>Unlocking The Future of Mobile-First Web Development</h2>
             <p className="second__container__lead">
               As we move towards a new ‘mobile internet’, demanding consumers
@@ -318,10 +325,11 @@ const Main = () => {
         <div className="second__container__article">
           <div className="second__container__sidebar">
             {/* <p className="article__details--time">18 min read</p> */}
-            {/* <p className="article__details--category">CSS</p> */}
           </div>
           <img className="second__container__img--1" />
           <div className="second__container__heading">
+            <p className="article__details--category category__listing">CSS</p>
+
             <h2>Modern CSS Tooltips And Speech Bubbles</h2>
             <p className="second__container__lead">
               Tooltips are a very common pattern used in CSS for years. There
@@ -336,10 +344,11 @@ const Main = () => {
         <div className="second__container__article">
           <div className="second__container__sidebar">
             {/* <p className="article__details--time">13 min read</p> */}
-            {/* <p className="article__details--category">UX</p> */}
           </div>
           <img className="second__container__img--2" />
           <div className="second__container__heading">
+            <p className="article__details--category category__listing">UX</p>
+
             <h2>How Conversational AI is upping UX and CX standards </h2>
             <p className="second__container__lead">
               Conversational AI is a revolutionary technology enabling people to
@@ -355,10 +364,13 @@ const Main = () => {
         <div className="second__container__article">
           <div className="second__container__sidebar">
             {/* <p className="article__details--time">18 min read</p> */}
-            {/* <p className="article__details--category">Web Design</p> */}
           </div>
           <img className="second__container__img--3" />
           <div className="second__container__heading">
+            <p className="article__details--category category__listing">
+              Web Design
+            </p>
+
             <h2>Unlocking The Future of Mobile-First Web Development</h2>
             <p className="second__container__lead">
               As we move towards a new ‘mobile internet’, demanding consumers

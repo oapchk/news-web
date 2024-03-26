@@ -62,7 +62,10 @@
     align-items: center;
   }
 }
-
+.category__listing {
+  margin-left: 0;
+  padding-bottom: px_rem(16px);
+}
 .article__icons {
   &--btn {
     border: none;
@@ -177,6 +180,7 @@
   padding-block: px_rem(8px);
   font-weight: 600;
   &--black {
+    border: none;
     color: white;
     padding-inline: px_rem(32px);
     background-color: #000;
@@ -378,9 +382,12 @@
   h2 {
     line-height: 1;
     padding-bottom: px_rem(32px);
+    @include media-q(sm) {
+      padding-bottom: 0;
+    }
   }
   &__heading {
-    font-size: max(3vw, px_rem(12px));
+    font-size: max(1.5vw, px_rem(12px));
     margin-bottom: px_rem(16px);
   }
   img {

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Tooltip.scss";
 import { useTheme } from "../../context/ThemeContext";
+import PropTypes from "prop-types";
 
 const Tooltip = ({ text, children }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,4 +20,8 @@ const Tooltip = ({ text, children }) => {
   );
 };
 
+Tooltip.propTypes = {
+  text: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
+};
 export default Tooltip;

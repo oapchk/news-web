@@ -1,7 +1,11 @@
 @import "../../sass/helpers/functions.scss";
 @import "../../sass/variables.scss";
 @import "../../sass/helpers/mixins.scss";
-
+.footer__main {
+  max-width: px_rem(1300px);
+  padding: px_rem(16px);
+  margin: auto;
+}
 .footer__header {
   text-transform: uppercase;
   font-weight: 600;
@@ -35,9 +39,39 @@
 }
 
 .footer-navigation {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__list--item {
+    padding-top: px_rem(8px);
+  }
   &__item {
     padding: px_rem(16px) 0;
     border-bottom: px_rem(1px) solid rgba(#000000, 0.3);
   }
   padding-bottom: px_rem(24px);
+}
+
+.footer-navigation__header::after {
+  content: "×";
+  color: #000000;
+  font-size: 2rem;
+  line-height: 1rem;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 10%;
+  right: 0;
+}
+
+.footer-navigation__body {
+  display: none;
+}
+
+.footer-navigation__body.open {
+  display: block;
 }

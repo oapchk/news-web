@@ -1,18 +1,42 @@
+import { useState } from "react";
 import "./Footer.scss";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF, FaDiscord, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
+  const [openAccordion, setOpenAccordion] = useState([]);
+
+  const handleAccordionClick = (index) => {
+    // Sprawdź, czy element jest już otwarty
+    const isOpen = openAccordion.includes(index);
+
+    // Jeśli jest otwarty, zamknij go
+    if (isOpen) {
+      setOpenAccordion(
+        openAccordion.filter((itemIndex) => itemIndex !== index)
+      );
+    } else {
+      // Jeśli nie jest otwarty, otwórz go, dodając jego index do tablicy otwartych elementów
+      setOpenAccordion([...openAccordion, index]);
+    }
+  };
   return (
     <footer className="footer">
       <div className="footer__main">
         <div className="footer__nav">
           <nav className="footer-navigation">
             <div className="footer-navigation__item">
-              <div className="footer-navigation_header footer__header">
+              <div
+                className="footer-navigation__header footer__header"
+                onClick={() => handleAccordionClick(0)}
+              >
                 News
               </div>
-              <div className="footer-navigation_body">
+              <div
+                className={`footer-navigation__body ${
+                  openAccordion.includes(0) ? "open" : ""
+                }`}
+              >
                 <ul className="footer-navigation__list">
                   <li className="footer-navigation__list--item">Web Design</li>
                   <li className="footer-navigation__list--item">UX</li>
@@ -25,10 +49,17 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer-navigation__item">
-              <div className="footer-navigation_header footer__header">
+              <div
+                className="footer-navigation__header footer__header"
+                onClick={() => handleAccordionClick(1)}
+              >
                 About us
               </div>
-              <div className="footer-navigation_body">
+              <div
+                className={`footer-navigation__body ${
+                  openAccordion.includes(1) ? "open" : ""
+                }`}
+              >
                 <ul className="footer-navigation__list">
                   <li className="footer-navigation__list--item">
                     Get to know us
@@ -37,20 +68,25 @@ const Footer = () => {
                     Join our team
                   </li>
                   <li className="footer-navigation__list--item">Community</li>
-                  <li className="footer-navigation__list--item"></li>
                 </ul>
               </div>
             </div>
             <div className="footer-navigation__item">
-              <div className="footer-navigation_header footer__header">
+              <div
+                className="footer-navigation__header footer__header"
+                onClick={() => handleAccordionClick(2)}
+              >
                 Contact
               </div>
-              <div className="footer-navigation_body">
+              <div
+                className={`footer-navigation__body ${
+                  openAccordion.includes(2) ? "open" : ""
+                }`}
+              >
                 <ul className="footer-navigation__list">
                   <li className="footer-navigation__list--item">Help</li>
                   <li className="footer-navigation__list--item">FAQ</li>
                   <li className="footer-navigation__list--item">Address</li>
-                  <li className="footer-navigation__list--item"></li>
                 </ul>
               </div>
             </div>

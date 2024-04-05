@@ -262,121 +262,86 @@ const Main = () => {
       </div>
 
       <div className={`second__container`} data-theme={theme}>
-        <h2 className="second__container__title">All articles</h2>
-        <div className="second__container__article">
-          <div className="second__container__sidebar">
-            {/* <p className="article__details--time">18 min read</p> */}
-            {/* <p className="article__details--category">CSS</p> */}
-          </div>
-          <img className="second__container__img--1" />
-          <div className="second__container__heading">
-            <p className="article__details--category category__listing">CSS</p>
+        {/* <h2 className="second__container__title">All articles</h2> */}
+        <div className="second__container__articles">
+          <div className="second__container__article">
+            <img className="second__container__img--1" />
+            <div className="second__container__heading">
+              <p className="article__details--category category__listing">
+                CSS
+              </p>
 
-            <h2>Modern CSS Tooltips And Speech Bubbles</h2>
+              <h2>Modern CSS Tooltips And Speech Bubbles</h2>
 
-            <p className="second__container__lead">
-              Tooltips are a very common pattern used in CSS for years. There
-              are a lot of ways to approach tooltips in CSS, though some evoke
-              headaches with all the magic numbers they require. In this
-              article, Temani Afif presents modern techniques to create tooltips
-              with the smallest amount of markup and the greatest amount of
-              flexibility.
-            </p>
+              <p className="second__container__lead">
+                Tooltips are a very common pattern used in CSS for years.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="second__container__article">
-          <div className="second__container__sidebar">
-            {/* <p className="article__details--time">13 min read</p> */}
-          </div>
-          <img className="second__container__img--2" />
-          <div className="second__container__heading">
-            <p className="article__details--category category__listing">UX</p>
+          <div className="second__container__article">
+            <img className="second__container__img--2" />
+            <div className="second__container__heading">
+              <p className="article__details--category category__listing">UX</p>
 
-            <h2>How Conversational AI is upping UX and CX standards </h2>
-            <p className="second__container__lead">
-              Conversational AI is a revolutionary technology enabling people to
-              interact with machines in natural language. It facilitates a
-              drastic shift in how we interact with man-made objects, creating a
-              potential ecosystem of seamless cohesion between man and machine.
-              It augments not just a single task, but in how humans solve
-              problems, making previously inaccessible technology available to
-              the masses with no learning curve.
-            </p>
+              <h2>How Conversational AI is upping UX and CX standards </h2>
+              <p className="second__container__lead">
+                Conversational AI is a revolutionary technology enabling people
+                to interact with machines in natural language.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="second__container__article">
-          <div className="second__container__sidebar">
-            {/* <p className="article__details--time">18 min read</p> */}
-          </div>
-          <img className="second__container__img--3" />
-          <div className="second__container__heading">
-            <p className="article__details--category category__listing">
-              Web Design
-            </p>
+          <div className="second__container__article">
+            <img className="second__container__img--3" />
+            <div className="second__container__heading">
+              <p className="article__details--category category__listing">
+                Web Design
+              </p>
 
-            <h2>Unlocking The Future of Mobile-First Web Development</h2>
-            <p className="second__container__lead">
-              As we move towards a new ‘mobile internet’, demanding consumers
-              are constantly looking for new ways to improve their online
-              experience and customise their brand journey to the ma
-            </p>
+              <h2>Unlocking The Future of Mobile-First Web Development</h2>
+              <p className="second__container__lead">
+                New ‘mobile internet’ consumers are constantly looking for new
+                ways to improve their online experience.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="second__container__article">
-          <div className="second__container__sidebar">
-            {/* <p className="article__details--time">18 min read</p> */}
-          </div>
-          <img className="second__container__img--1" />
-          <div className="second__container__heading">
-            <p className="article__details--category category__listing">CSS</p>
+          <div className="second__container__article">
+            <img className="second__container__img--1" />
+            <div className="second__container__heading">
+              <p className="article__details--category category__listing">
+                CSS
+              </p>
 
-            <h2>Modern CSS Tooltips And Speech Bubbles</h2>
-            <p className="second__container__lead">
-              Tooltips are a very common pattern used in CSS for years. There
-              are a lot of ways to approach tooltips in CSS, though some evoke
-              headaches with all the magic numbers they require. In this
-              article, Temani Afif presents modern techniques to create tooltips
-              with the smallest amount of markup and the greatest amount of
-              flexibility.
-            </p>
+              <h2>Modern CSS Tooltips And Speech Bubbles</h2>
+              <p className="second__container__lead">
+                Tooltips are a very common pattern used in CSS for years.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="second__container__article">
-          <div className="second__container__sidebar">
-            {/* <p className="article__details--time">13 min read</p> */}
-          </div>
-          <img className="second__container__img--2" />
-          <div className="second__container__heading">
-            <p className="article__details--category category__listing">UX</p>
+          <div className="second__container__article">
+            <img className="second__container__img--2" />
+            <div className="second__container__heading">
+              <p className="article__details--category category__listing">UX</p>
 
-            <h2>How Conversational AI is upping UX and CX standards </h2>
-            <p className="second__container__lead">
-              Conversational AI is a revolutionary technology enabling people to
-              interact with machines in natural language. It facilitates a
-              drastic shift in how we interact with man-made objects, creating a
-              potential ecosystem of seamless cohesion between man and machine.
-              It augments not just a single task, but in how humans solve
-              problems, making previously inaccessible technology available to
-              the masses with no learning curve.
-            </p>
+              <h2>How Conversational AI is upping UX and CX standards </h2>
+              <p className="second__container__lead">
+                Conversational AI is a revolutionary technology enabling people
+                to interact with machines in natural language.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="second__container__article">
-          <div className="second__container__sidebar">
-            {/* <p className="article__details--time">18 min read</p> */}
-          </div>
-          <img className="second__container__img--3" />
-          <div className="second__container__heading">
-            <p className="article__details--category category__listing">
-              Web Design
-            </p>
+          <div className="second__container__article">
+            <img className="second__container__img--3" />
+            <div className="second__container__heading">
+              <p className="article__details--category category__listing">
+                Web Design
+              </p>
 
-            <h2>Unlocking The Future of Mobile-First Web Development</h2>
-            <p className="second__container__lead">
-              As we move towards a new ‘mobile internet’, demanding consumers
-              are constantly looking for new ways to improve their online
-              experience and customise their brand journey to the ma
-            </p>
+              <h2>Unlocking The Future of Mobile-First Web Development</h2>
+              <p className="second__container__lead">
+                New ‘mobile internet’ consumers are constantly looking for new
+                ways to improve their online experience
+              </p>
+            </div>
           </div>
         </div>
       </div>

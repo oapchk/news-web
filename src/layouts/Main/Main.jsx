@@ -271,7 +271,7 @@ const Main = () => {
                 CSS
               </p>
 
-              <h2>Modern CSS Tooltips And Speech Bubbles</h2>
+              <h3>Modern CSS Tooltips And Speech Bubbles</h3>
 
               <p className="second__container__lead">
                 Tooltips are a very common pattern used in CSS for years.
@@ -283,7 +283,7 @@ const Main = () => {
             <div className="second__container__heading">
               <p className="article__details--category category__listing">UX</p>
 
-              <h2>How Conversational AI is upping UX and CX standards </h2>
+              <h3>How Conversational AI is upping UX and CX standards </h3>
               <p className="second__container__lead">
                 Conversational AI is a revolutionary technology enabling people
                 to interact with machines in natural language.
@@ -297,7 +297,7 @@ const Main = () => {
                 Web Design
               </p>
 
-              <h2>Unlocking The Future of Mobile-First Web Development</h2>
+              <h3>Unlocking The Future of Mobile-First Web Development</h3>
               <p className="second__container__lead">
                 New ‘mobile internet’ consumers are constantly looking for new
                 ways to improve their online experience.
@@ -311,7 +311,7 @@ const Main = () => {
                 CSS
               </p>
 
-              <h2>Modern CSS Tooltips And Speech Bubbles</h2>
+              <h3>Modern CSS Tooltips And Speech Bubbles</h3>
               <p className="second__container__lead">
                 Tooltips are a very common pattern used in CSS for years.
               </p>
@@ -322,7 +322,7 @@ const Main = () => {
             <div className="second__container__heading">
               <p className="article__details--category category__listing">UX</p>
 
-              <h2>How Conversational AI is upping UX and CX standards </h2>
+              <h3>How Conversational AI is upping UX and CX standards </h3>
               <p className="second__container__lead">
                 Conversational AI is a revolutionary technology enabling people
                 to interact with machines in natural language.
@@ -336,10 +336,39 @@ const Main = () => {
                 Web Design
               </p>
 
-              <h2>Unlocking The Future of Mobile-First Web Development</h2>
+              <h3>Unlocking The Future of Mobile-First Web Development</h3>
               <p className="second__container__lead">
                 New ‘mobile internet’ consumers are constantly looking for new
                 ways to improve their online experience
+              </p>
+            </div>
+          </div>
+          <div className="second__container__article">
+            <img className="second__container__img--3" />
+            <div className="second__container__heading">
+              <p className="article__details--category category__listing">
+                JavaScript
+              </p>
+
+              <h3>How Marketing Changed OOP In JavaScript</h3>
+              <p className="second__container__lead">
+                The article scrutinizes their origin, examines missteps in the
+                design, and explores how these factors have affected the way we
+                write JavaScript today.
+              </p>
+            </div>
+          </div>
+          <div className="second__container__article">
+            <img className="second__container__img--3" />
+            <div className="second__container__heading">
+              <p className="article__details--category category__listing">
+                Web Design
+              </p>
+
+              <h3>The Things Users Would Appreciate In Mobile Apps</h3>
+              <p className="second__container__lead">
+                What can we do to make a mobile app better? What subsidiary
+                features are worth providing for our users?
               </p>
             </div>
           </div>

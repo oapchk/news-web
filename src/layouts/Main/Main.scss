@@ -11,18 +11,21 @@
 .main__articles {
   border-inline: solid px_rem(2px) var(--text-primary);
   padding: px_rem(32px) px_rem(16px) 0 px_rem(16px);
-  @include media-q(sm) {
+  @include media-q(xl) {
+    flex: 0 0 50%;
+  }
+  @include media-q(xl) {
     border-inline: none;
-    padding: 0;
+    // padding: 0;
+  }
+  @include media-q(lg) {
+    flex: 0 0 80%;
   }
 }
 .articles__date--big {
   font-family: "Kalnia";
   font-size: max(6vw, 52px);
   font-weight: 400;
-  // @include media-q(sm) {
-  //   font-size: px_rem(62px);
-  // }
 }
 
 .article__hdl,
@@ -105,12 +108,19 @@
 .main__sidemenu {
   padding-top: px_rem(32px);
   flex: 0 0 15%;
+  @include media-q(xl) {
+    flex: 0 0 100%;
+  }
 }
 .main__aside {
   flex: 0 0 30%;
   padding: px_rem(32px) px_rem(16px) 0 px_rem(16px);
-  @include media-q(sm) {
-    padding: 0;
+  @include media-q(xl) {
+    flex: 0 0 30%;
+    padding: px_rem(124px) 0 0 0;
+  }
+  @include media-q(lg) {
+    flex: 0 0 80%;
   }
 }
 
@@ -119,11 +129,19 @@
   margin: auto;
   padding-inline: px_rem(16px);
   display: flex;
+  @include media-q(xl) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
   @include media-q(sm) {
     flex-direction: column;
+    // flex-wrap: nowrap;
   }
 }
 .sidemenu__items {
+  @include media-q(xl) {
+    display: flex;
+  }
   @include media-q(sm) {
     display: flex;
     scroll-snap-type: x;
@@ -207,7 +225,7 @@
   display: block;
   height: px_rem(2px);
   background-color: var(--text-primary);
-  width: px_rem(1300px);
+  max-width: px_rem(1300px);
   margin-inline: auto;
   margin-bottom: px_rem(32px);
   @include media-q(sm) {
@@ -361,7 +379,9 @@
   max-width: px_rem(1300px);
   margin-inline: auto;
   padding-inline: px_rem(16px);
-
+  @include media-q(xl) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
   @include media-q(sm) {
     max-width: px_rem(430px);
     display: grid;
@@ -444,6 +464,9 @@
   grid-template-rows: 1fr 1fr;
   grid-column: 2/6;
   gap: px_rem(16px);
+  @include media-q(xl) {
+    grid-column: 1/5;
+  }
   @include media-q(sm) {
     // max-width: px_rem(430px);
     display: grid;

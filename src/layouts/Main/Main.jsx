@@ -226,9 +226,9 @@ const Main = () => {
               </p>
               <button className="btn--black btn">Subscribe</button>
             </div>
-            <p className="aside__heading">Featured</p>
 
             <div className="aside__titles">
+              <p className="aside__heading">Featured</p>
               <h3 className="articles__3boxes--title">
                 The Guide to BEM & SCSS: Writing Clean, Structured, and Slightly
                 Sassier Stylesheets

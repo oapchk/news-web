@@ -47,6 +47,9 @@
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
   }
+  &__social {
+    grid-column: 6/7;
+  }
 }
 
 .footer-mini-nav {
@@ -81,9 +84,6 @@
     color: var(--text-primary);
     padding-block: px_rem(16px);
   }
-  // &__header {
-  //   font-size: px_rem(12px);
-  // }
 }
 
 .footer-navigation {

@@ -1,9 +1,10 @@
 @import "../../sass/variables.scss";
 @import "../../sass/helpers/functions.scss";
 @import "../../sass/helpers/mixins.scss";
+
 .main__container {
   border-top: solid px_rem(2px) var(--text-primary);
-  @include media-q(sm) {
+  @include media-q(xl) {
     border-top: none;
   }
 }
@@ -16,7 +17,8 @@
   }
   @include media-q(xl) {
     border-inline: none;
-    // padding: 0;
+    padding: 0;
+    padding-top: px_rem(16px);
   }
   @include media-q(lg) {
     flex: 0 0 80%;
@@ -121,6 +123,10 @@
   }
   @include media-q(lg) {
     flex: 0 0 80%;
+    padding: 0;
+  }
+  @include media-q(sm) {
+    padding: 0;
   }
 }
 
@@ -135,22 +141,33 @@
   }
   @include media-q(sm) {
     flex-direction: column;
-    // flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 }
 .sidemenu__items {
   @include media-q(xl) {
     display: flex;
+    justify-content: center;
+    gap: px_rem(22px);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--text-primary);
   }
   @include media-q(sm) {
     display: flex;
+    justify-content: flex-start;
     scroll-snap-type: x;
     gap: px_rem(8px);
     overflow-x: auto;
     scrollbar-width: none;
+    text-transform: none;
+    border: none;
   }
 }
 .sidemenu__item {
+  a:hover {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
   padding-bottom: px_rem(16px);
   color: var(--text-primary);
   @include media-q(sm) {
@@ -410,6 +427,7 @@
     margin-bottom: px_rem(16px);
     @include media-q(sm) {
       display: block;
+      font-size: px_rem(14px);
     }
   }
   img {

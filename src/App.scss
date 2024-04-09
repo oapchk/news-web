@@ -18,6 +18,14 @@ button {
   background-color: inherit;
   display: inline-block;
   color: var(--text-primary);
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    border-radius: 0;
+  }
+  &:active {
+    transform: scale(1.1);
+  }
 }
 
 body {

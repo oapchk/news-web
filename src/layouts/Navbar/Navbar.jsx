@@ -28,7 +28,7 @@ const Navbar = () => {
       </div>
       <div className="navbar_mode">
         <button className="navbar__item" onClick={toggleMode}>
-          <Tooltip text={"Change theme"}>
+          <Tooltip text={"Change theme"} className="navbar__item--tooltip">
             {theme === "light" ? <FaRegSun /> : <FaRegMoon />}
           </Tooltip>
         </button>

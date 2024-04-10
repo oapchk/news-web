@@ -19,19 +19,21 @@ const Navbar = () => {
         </a>
       </div>
       <Searchbar />
-      <div className="navbar_user">
-        <button className="navbar__item">
-          <Tooltip text={"Sign In"}>
-            <FaRegUser />
-          </Tooltip>
-        </button>
-      </div>
-      <div className="navbar_mode">
-        <button className="navbar__item" onClick={toggleMode}>
-          <Tooltip text={"Change theme"} className="navbar__item--tooltip">
-            {theme === "light" ? <FaRegSun /> : <FaRegMoon />}
-          </Tooltip>
-        </button>
+      <div className="navbar__buttons">
+        <div className="navbar_user">
+          <button className="navbar__item">
+            <Tooltip text={"Sign In"} className="signin-tooltip">
+              <FaRegUser />
+            </Tooltip>
+          </button>
+        </div>
+        <div className="navbar_mode">
+          <button className="navbar__item" onClick={toggleMode}>
+            <Tooltip text={"Change theme"} className="mode-tooltip">
+              {theme === "light" ? <FaRegSun /> : <FaRegMoon />}
+            </Tooltip>
+          </button>
+        </div>
       </div>
     </nav>
   );

@@ -11,18 +11,24 @@
   align-items: center;
   @include media-q(sm) {
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
-.navbar__logo {
-  margin-right: px_rem(64px);
-}
-
-.navbar__item {
-  border: none;
-  padding-left: px_rem(8px);
-  font-size: px_rem(16px);
-  @include media-q(sm) {
-    justify-content: flex-end;
+.navbar {
+  &__buttons {
+    display: flex;
+  }
+  &__logo {
+    margin-right: px_rem(64px);
+  }
+  &__item {
+    border: none;
+    padding-left: px_rem(8px);
+    font-size: px_rem(16px);
+    @include media-q(sm) {
+      justify-content: flex-end;
+    }
   }
 }
+

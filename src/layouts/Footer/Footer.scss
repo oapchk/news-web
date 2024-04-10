@@ -95,14 +95,19 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    // font-size: px_rem(12px);
   }
   &__list--item {
     padding-top: px_rem(8px);
+
+    &:hover {
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
   }
   &__item {
     padding: px_rem(16px) 0;
     border-bottom: px_rem(1px) solid rgba(#000000, 0.3);
+
     @media screen and (min-width: 1000px) {
       border: none;
     }
@@ -122,11 +127,15 @@
   position: absolute;
   top: 10%;
   right: 0;
+
   @media screen and (min-width: 1000px) {
     content: none;
   }
 }
 
+.open.footer-navigation__header::after {
+  transform: rotate(0);
+}
 .footer-navigation__body {
   display: none;
   @media screen and (min-width: 1000px) {

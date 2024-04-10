@@ -163,28 +163,28 @@ const Main = () => {
               </div>
 
               <div className="aside__titles">
-                <h3 className="articles__3boxes--title">
+                <h4 className="articles__3boxes--title">
                   The Guide to BEM & SCSS: Writing Clean, Structured, and
                   Slightly Sassier Stylesheets
-                </h3>
+                </h4>
                 <div className="article__details--2ndline details">
                   <p className="article__details--time">12 min read</p>
                   <p className="article__details--category">CSS</p>
                 </div>
                 <span className=" articles__3boxes--line line"></span>
-                <h3 className="articles__3boxes--title">
+                <h4 className="articles__3boxes--title">
                   Mastering JSX: Unveiling the Secrets for JavaScript, React,
                   and Frontend Brilliance
-                </h3>
+                </h4>
                 <div className="article__details--2ndline details">
                   <p className="article__details--time">9 min read</p>
                   <p className="article__details--category">JavaScript</p>
                 </div>
                 <span className="articles__3boxes--line line"></span>
-                <h3 className="articles__3boxes--title">
+                <h4 className="articles__3boxes--title">
                   Drive Success and Avoid Costly Mistakes By Getting Your UX
                   Research Right!
-                </h3>
+                </h4>
                 <div className="article__details--2ndline details">
                   <p className="article__details--time">7 min read</p>
                   <p className="article__details--category">UX</p>
@@ -229,28 +229,28 @@ const Main = () => {
 
             <div className="aside__titles">
               <p className="aside__heading">Featured</p>
-              <h3 className="articles__3boxes--title">
+              <h4 className="articles__3boxes--title">
                 The Guide to BEM & SCSS: Writing Clean, Structured, and Slightly
                 Sassier Stylesheets
-              </h3>
+              </h4>
               <div className="article__details--2ndline details">
                 <p className="article__details--time">12 min read</p>
                 <p className="article__details--category">CSS</p>
               </div>
               <span className="articles__3boxes--line line"></span>
-              <h3 className="articles__3boxes--title">
+              <h4 className="articles__3boxes--title">
                 Mastering JSX: Unveiling the Secrets for JavaScript, React, and
                 Frontend Brilliance
-              </h3>
+              </h4>
               <div className="article__details--2ndline details">
                 <p className="article__details--time">9 min read</p>
                 <p className="article__details--category">JavaScript</p>
               </div>
               <span className="articles__3boxes--line line"></span>
-              <h3 className="articles__3boxes--title">
+              <h4 className="articles__3boxes--title">
                 Drive Success and Avoid Costly Mistakes By Getting Your UX
                 Research Right!
-              </h3>
+              </h4>
               <div className="article__details--2ndline details">
                 <p className="article__details--time">7 min read</p>
                 <p className="article__details--category">UX</p>

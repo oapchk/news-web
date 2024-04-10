@@ -151,6 +151,7 @@
     gap: px_rem(22px);
     text-transform: uppercase;
     border-bottom: 1px solid var(--text-primary);
+    font-weight: 600;
   }
   @include media-q(sm) {
     display: flex;
@@ -166,7 +167,6 @@
 .sidemenu__item {
   a:hover {
     color: var(--text-secondary);
-    font-weight: 600;
   }
   padding-bottom: px_rem(16px);
   color: var(--text-primary);
@@ -185,7 +185,7 @@
       width: 100%;
     }
     &--2 {
-      content: url("src/assets/3screens.png");
+      content: url("src/assets/img4.png");
       width: 30%;
     }
   }
@@ -456,6 +456,9 @@
     grid-template-rows: auto 1fr;
     gap: px_rem(12px);
     padding-bottom: px_rem(16px);
+    // background-color: var(--bg-search);
+    // padding: px_rem(12px);
+    // border-radius: px_rem(5px);
     @include media-q(sm) {
       display: flex;
       background-color: var(--bg-search);

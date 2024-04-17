@@ -5,6 +5,20 @@ import { FaFacebookF, FaDiscord, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   const [openAccordion, setOpenAccordion] = useState([]);
+  const accordionData = [
+    {
+      title: "News",
+      items: ["Web Design", "UX", "JavaScript", "CSS", "Accessibility"],
+    },
+    {
+      title: "About us",
+      items: ["Get to know us", "Join our team", "Community"],
+    },
+    {
+      title: "Contact",
+      items: ["Help", "FAQ", "Address"],
+    },
+  ];
 
   const handleAccordionClick = (index) => {
     // Sprawdź, czy element jest już otwarty
@@ -25,97 +39,48 @@ const Footer = () => {
       <div className="footer__main">
         <div className="footer__nav">
           <nav className="footer-navigation">
-            <div className="footer-navigation__item">
-              <div
-                className="footer-navigation__header footer__header"
-                onClick={() => handleAccordionClick(0)}
-              >
-                News
+            {accordionData.map((section, index) => (
+              <div className="footer-navigation__item" key={index}>
+                <div
+                  className="footer-navigation__header footer__header"
+                  onClick={() => handleAccordionClick(index)}
+                >
+                  {section.title}
+                </div>
+                <div
+                  className={`footer-navigation__body ${
+                    openAccordion.includes(index) ? "open" : ""
+                  }`}
+                >
+                  <ul className="footer-navigation__list">
+                    {section.items.map((item, idx) => (
+                      <li key={idx} className="footer-navigation__list--item">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <div
-                className={`footer-navigation__body ${
-                  openAccordion.includes(0) ? "open" : ""
-                }`}
-              >
-                <ul className="footer-navigation__list">
-                  <li className="footer-navigation__list--item">Web Design</li>
-                  <li className="footer-navigation__list--item">UX</li>
-                  <li className="footer-navigation__list--item">JavaScript</li>
-                  <li className="footer-navigation__list--item">CSS</li>
-                  <li className="footer-navigation__list--item">
-                    Accessibility
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="footer-navigation__item">
-              <div
-                className="footer-navigation__header footer__header"
-                onClick={() => handleAccordionClick(1)}
-              >
-                About us
-              </div>
-              <div
-                className={`footer-navigation__body ${
-                  openAccordion.includes(1) ? "open" : ""
-                }`}
-              >
-                <ul className="footer-navigation__list">
-                  <li className="footer-navigation__list--item">
-                    Get to know us
-                  </li>
-                  <li className="footer-navigation__list--item">
-                    Join our team
-                  </li>
-                  <li className="footer-navigation__list--item">Community</li>
-                </ul>
-              </div>
-            </div>
-            <div className="footer-navigation__item">
-              <div
-                className="footer-navigation__header footer__header"
-                onClick={() => handleAccordionClick(2)}
-              >
-                Contact
-              </div>
-              <div
-                className={`footer-navigation__body ${
-                  openAccordion.includes(2) ? "open" : ""
-                }`}
-              >
-                <ul className="footer-navigation__list">
-                  <li className="footer-navigation__list--item">Help</li>
-                  <li className="footer-navigation__list--item">FAQ</li>
-                  <li className="footer-navigation__list--item">Address</li>
-                </ul>
-              </div>
-            </div>
+            ))}
           </nav>
         </div>
         <div className="footer__social">
           <div className="footer-social">
             <div className="footer-social__header footer__header">Join us</div>
             <ul className="footer-social__list">
-              <li className="footer-social__item footer-social__item--icon">
-                <a className="" href="">
-                  <FaXTwitter />
-                </a>
-              </li>
-              <li className="footer-social__item footer-social__item--icon">
-                <a className="" href="">
-                  <FaFacebookF />
-                </a>
-              </li>
-              <li className="footer-social__item footer-social__item--icon">
-                <a className="" href="">
-                  <FaDiscord />
-                </a>
-              </li>
-              <li className="footer-social__item footer-social__item--icon">
-                <a className="" href="">
-                  <FaYoutube />
-                </a>
-              </li>
+              {[
+                { icon: <FaXTwitter />, href: "#" },
+                { icon: <FaFacebookF />, href: "#" },
+                { icon: <FaDiscord />, href: "#" },
+                { icon: <FaYoutube />, href: "#" },
+              ].map((item, index) => (
+                <li
+                  key={index}
+                  className="footer-social__item footer-social__item--icon"
+                >
+                  <a href={item.href}>{item.icon}</a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

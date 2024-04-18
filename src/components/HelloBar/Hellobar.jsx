@@ -1,5 +1,5 @@
 // import { useState, useEffect, useRef } from "react";
-import "./HelloBar.scss";
+import "./Hellobar.scss";
 import { useTheme } from "../../context/ThemeContext";
 
 const Hellobar = () => {

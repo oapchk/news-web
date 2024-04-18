@@ -2,9 +2,12 @@ import { useState } from "react";
 import "./Footer.scss";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF, FaDiscord, FaYoutube } from "react-icons/fa";
+import { useTheme } from "../../context/ThemeContext";
 
 const Footer = () => {
   const [openAccordion, setOpenAccordion] = useState([]);
+  const { theme } = useTheme();
+
   const accordionData = [
     {
       title: "News",
@@ -35,7 +38,7 @@ const Footer = () => {
     }
   };
   return (
-    <footer className="footer">
+    <footer className={`footer`} data-theme={theme}>
       <div className="footer__main">
         <div className="footer__nav">
           <nav className="footer-navigation">

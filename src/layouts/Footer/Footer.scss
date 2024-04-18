@@ -7,7 +7,7 @@
     max-width: px_rem(1300px);
     padding: px_rem(16px);
     margin: auto;
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: px_rem(1000px)) {
       display: grid;
       grid-template-rows: 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -20,7 +20,7 @@
   }
   &__copyright {
     opacity: 0.7;
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: px_rem(1000px)) {
       grid-row-start: 1;
       grid-column-start: 1;
       grid-row-end: 4;
@@ -29,7 +29,7 @@
     }
   }
   &__nav {
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: px_rem(1000px)) {
       grid-row-start: 1;
       grid-column-start: 1;
       grid-column-end: 5;
@@ -37,7 +37,7 @@
     }
   }
   &__bottom {
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: px_rem(1000px)) {
       display: grid;
       grid-row-start: 3;
       grid-column-start: 1;
@@ -55,7 +55,7 @@
 .footer-mini-nav {
   display: flex;
   flex-wrap: wrap;
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: px_rem(1000px)) {
     flex-wrap: nowrap;
     grid-row-start: 1;
     grid-column-start: 5;
@@ -87,7 +87,7 @@
 }
 
 .footer-navigation {
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: px_rem(1000px)) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -108,7 +108,7 @@
     padding: px_rem(16px) 0;
     border-bottom: px_rem(1px) solid rgba(#000000, 0.3);
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: px_rem(1000px)) {
       border: none;
     }
   }
@@ -118,8 +118,8 @@
 .footer-navigation__header::before {
   content: "×";
   color: #000000;
-  font-size: 2rem;
-  line-height: 1rem;
+  font-size: px_rem(32px);
+  line-height: px_rem(16px);
   transform: rotate(-45deg);
   cursor: pointer;
   display: block;
@@ -128,7 +128,7 @@
   top: 10%;
   right: 0;
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: px_rem(1000px)) {
     content: none;
   }
 }
@@ -138,9 +138,9 @@
   transition: max-height 0.5s ease-in-out;
   max-height: 0;
   &.open {
-    max-height: 1000px;
+    max-height: px_rem(1000px);
   }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: px_rem(1000px)) {
     display: block;
     max-height: none;
   }

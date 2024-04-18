@@ -244,8 +244,9 @@
   background-color: var(--text-primary);
   max-width: px_rem(1300px);
   margin-inline: auto;
+  padding-inline: 16px;
   margin-bottom: px_rem(32px);
-  @include media-q(sm) {
+  @include media-q(xl) {
     display: none;
   }
 }
@@ -449,6 +450,18 @@
     &--3 {
       width: px_rem(340px);
       content: url("src/assets/img3.png");
+    }
+    &--5 {
+      width: px_rem(340px);
+      content: url("src/assets/img5.png");
+    }
+    &--6 {
+      width: px_rem(340px);
+      content: url("src/assets/img6.png");
+    }
+    &--7 {
+      width: px_rem(340px);
+      content: url("src/assets/img7.png");
     }
   }
   &__article {

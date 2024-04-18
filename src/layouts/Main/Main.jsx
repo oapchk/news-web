@@ -279,7 +279,7 @@ const Main = () => {
             </div>
           </div>
           <div className="second__container__article">
-            <img className="second__container__img--2" />
+            <img className="second__container__img--7" />
             <div className="second__container__heading">
               <p className="article__details--category category__listing">UX</p>
 
@@ -318,7 +318,7 @@ const Main = () => {
             </div>
           </div>
           <div className="second__container__article">
-            <img className="second__container__img--2" />
+            <img className="second__container__img--7" />
             <div className="second__container__heading">
               <p className="article__details--category category__listing">UX</p>
 
@@ -330,7 +330,7 @@ const Main = () => {
             </div>
           </div>
           <div className="second__container__article">
-            <img className="second__container__img--3" />
+            <img className="second__container__img--2" />
             <div className="second__container__heading">
               <p className="article__details--category category__listing">
                 Web Design
@@ -344,7 +344,7 @@ const Main = () => {
             </div>
           </div>
           <div className="second__container__article">
-            <img className="second__container__img--3" />
+            <img className="second__container__img--6" />
             <div className="second__container__heading">
               <p className="article__details--category category__listing">
                 JavaScript
@@ -359,7 +359,7 @@ const Main = () => {
             </div>
           </div>
           <div className="second__container__article">
-            <img className="second__container__img--3" />
+            <img className="second__container__img--5" />
             <div className="second__container__heading">
               <p className="article__details--category category__listing">
                 Web Design

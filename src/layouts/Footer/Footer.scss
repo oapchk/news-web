@@ -115,7 +115,7 @@
   padding-bottom: px_rem(24px);
 }
 
-.footer-navigation__header::after {
+.footer-navigation__header::before {
   content: "×";
   color: #000000;
   font-size: 2rem;
@@ -133,16 +133,15 @@
   }
 }
 
-.open.footer-navigation__header::after {
-  transform: rotate(0);
-}
 .footer-navigation__body {
-  display: none;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  max-height: 0;
+  &.open {
+    max-height: 1000px;
+  }
   @media screen and (min-width: 1000px) {
     display: block;
+    max-height: none;
   }
-}
-
-.footer-navigation__body.open {
-  display: block;
 }

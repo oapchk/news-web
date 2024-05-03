@@ -45,7 +45,9 @@ const Footer = () => {
             {accordionData.map((section, index) => (
               <div className="footer-navigation__item" key={index}>
                 <div
-                  className="footer-navigation__header footer__header"
+                  className={`footer-navigation__header footer__header ${
+                    openAccordion.includes(index) ? "open" : ""
+                  }`}
                   onClick={() => handleAccordionClick(index)}
                 >
                   {section.title}

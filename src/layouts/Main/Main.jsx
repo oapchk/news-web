@@ -260,9 +260,8 @@ const Main = () => {
         </div>
         <span className="line--last"></span>
       </div>
-
       <div className={`second__container`} data-theme={theme}>
-        {/* <h2 className="second__container__title">All articles</h2> */}
+        <h2 className="second__container__title">All articles</h2>
         <div className="second__container__articles">
           <div className="second__container__article">
             <img className="second__container__img--1" />
@@ -374,6 +373,7 @@ const Main = () => {
           </div>
         </div>
       </div>
+      {/* <span className={`line--last`} data-theme={theme}></span> */}
     </>
   );
 };

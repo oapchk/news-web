@@ -6,3 +6,7 @@ All article titles come from [the Smashing Magazine](https://www.smashingmagazin
 ### Project status
 
 IN PROGRESS
+
+### live version
+
+[Click here 😊](https://news-frontend.netlify.app/)

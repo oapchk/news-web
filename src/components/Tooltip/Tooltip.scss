@@ -7,18 +7,19 @@
 }
 
 .tooltip {
-  font-size: px_rem(14px);
   position: absolute;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: px_rem(8px);
+  background-color: var(--background);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.08), 0 5px 8px 0 rgb(172, 172, 172);
+  color: var(--text-primary);
+  font-size: px_rem(12px);
+  padding: px_rem(12px) px_rem(20px);
   border-radius: px_rem(4px);
-  transform: translateY(-200%);
-  left: px_rem(-10px);
 }
 
 .signin-tooltip {
-  transform: translateY(10%);
+  transform: translateY(1%);
+  transform: translateX(-50%);
+  width: px_rem(200px);
 }
 
 .mode-tooltip {

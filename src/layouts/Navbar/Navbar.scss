@@ -26,6 +26,20 @@
     border: none;
     padding-left: px_rem(8px);
     font-size: px_rem(16px);
+    &--signin {
+      font-weight: 800;
+      text-decoration: underline;
+      display: inline-block;
+      padding-block: px_rem(8px);
+    }
+    &--signup {
+      border: solid px_rem(1px) var(--text-primary);
+      border-radius: px-rem(25px);
+      padding-block: px_rem(8px);
+      padding-inline: px_rem(16px);
+      font-weight: 600;
+      margin-block: px_rem(8px);
+    }
     @include media-q(sm) {
       justify-content: flex-end;
     }

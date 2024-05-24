@@ -63,12 +63,12 @@ const Main = () => {
 
                 <div className="article__icons">
                   <button className="article__icons--btn">
-                    <Tooltip text={"Share"}>
+                    <Tooltip content={"Share"}>
                       <CiShare2 />
                     </Tooltip>
                   </button>
                   <button className="article__icons--btn">
-                    <Tooltip text={"Save"}>
+                    <Tooltip content={"Save"}>
                       <IoIosAddCircleOutline />
                     </Tooltip>
                   </button>

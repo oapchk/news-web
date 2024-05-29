@@ -1,0 +1,21 @@
+@import "../../sass/helpers/functions.scss";
+@import "../../sass/variables.scss";
+@import "../../sass/helpers/mixins.scss";
+
+.profile {
+  max-width: px_rem(1300px);
+  padding: px_rem(16px);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__main {
+    padding: px_rem(52px);
+    margin: px_rem(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    @include media-q(xs) {
+      margin-block: 0;
+      padding: px_rem(24px) 0;
+    }
+  }
+}

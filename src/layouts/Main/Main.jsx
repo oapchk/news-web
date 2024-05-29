@@ -4,6 +4,7 @@ import { CiShare2 } from "react-icons/ci";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import Tooltip from "../../components/Tooltip/Tooltip";
 import { useTheme } from "../../context/ThemeContext";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -159,7 +160,9 @@ const Main = () => {
               <div className="aside__heading">
                 <p className="">Trending</p>
                 <span className="trending_light"></span>
-                <button className="btn--small btn">View all</button>
+                <button className="btn--small btn">
+                  <Link to="/trending">View all</Link>
+                </button>
               </div>
 
               <div className="aside__titles">
@@ -373,7 +376,6 @@ const Main = () => {
           </div>
         </div>
       </div>
-      {/* <span className={`line--last`} data-theme={theme}></span> */}
     </>
   );
 };

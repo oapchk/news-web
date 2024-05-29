@@ -1,0 +1,104 @@
+@import "../../sass/helpers/functions.scss";
+@import "../../sass/variables.scss";
+@import "../../sass/helpers/mixins.scss";
+
+.signup {
+  max-width: px_rem(1300px);
+  padding: px_rem(16px);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__main {
+    padding: px_rem(52px);
+    margin: px_rem(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    @include media-q(xs) {
+      margin-block: 0;
+      padding: px_rem(24px) 0;
+    }
+  }
+}
+
+.signup-dialog {
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: px_rem(48px);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.signup-form {
+  padding-bottom: px_rem(32px);
+  &__input {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding-bottom: px_rem(44px);
+    @include media-q(md) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.signup-form-row {
+  display: flex;
+  flex-direction: column;
+  width: px_rem(300px);
+  padding-inline: px_rem(8px);
+  padding-bottom: px_rem(16px);
+  &.username {
+    grid-column: 1/3;
+    width: 100%;
+  }
+  &--button {
+    display: flex;
+    justify-content: center;
+  }
+  &--text {
+    font-size: px_rem(14px);
+    text-decoration: underline;
+    font-weight: 600;
+  }
+}
+
+.signup-button {
+  width: 300px;
+  border: solid px_rem(1px) var(--text-primary);
+  border-radius: px-rem(25px);
+  padding-block: px_rem(8px);
+  margin-bottom: px_rem(16px);
+  font-weight: 600;
+}
+
+.signup-bottom {
+  &--text {
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding-left: px_rem(5px);
+  }
+}
+
+input {
+  background-color: var(--bg-search);
+  border-radius: px_rem(25px);
+  padding-block: px_rem(10px);
+  padding-left: px_rem(16px);
+}

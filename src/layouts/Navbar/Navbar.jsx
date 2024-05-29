@@ -42,13 +42,18 @@ const Navbar = () => {
                   {currentUser ? (
                     <>
                       <p>Welcome, {currentUser.email}</p>
-                      <button onClick={handleLogout}>Logout</button>
+                      <button
+                        className="navbar__item--btn btn"
+                        onClick={handleLogout}
+                      >
+                        Logout
+                      </button>
                     </>
                   ) : (
                     <>
                       <p>If you are a new customer</p>
                       <button
-                        className="navbar__item--signup"
+                        className="navbar__item--btn btn"
                         onClick={handleSignup}
                       >
                         SIGN UP

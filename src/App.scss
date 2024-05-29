@@ -12,11 +12,7 @@
 li {
   list-style: none;
 }
-h2,
-h3,
-h4 {
-  cursor: pointer;
-}
+
 button {
   cursor: pointer;
   background-color: inherit;
@@ -26,11 +22,17 @@ button {
   &:hover {
     border-radius: 0;
   }
-  // &:active {
-  //   transform: scale(1.1);
-  // }
 }
-
+.btn {
+  &:active {
+    background-color: var(--bg-search);
+  }
+  &--black {
+    &:active {
+      background-color: var(--text-secondary);
+    }
+  }
+}
 body {
   background-color: var(--background);
   color: var(--text-primary);

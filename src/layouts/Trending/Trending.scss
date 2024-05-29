@@ -1,0 +1,35 @@
+@import "../../sass/helpers/functions.scss";
+@import "../../sass/variables.scss";
+@import "../../App.scss";
+@import "../../sass/helpers/mixins.scss";
+
+.trending {
+  border-top: solid px_rem(2px) var(--text-primary);
+}
+
+.trending__main {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: px_rem(32px);
+  padding-top: px_rem(32px);
+}
+
+.trending__img {
+  border-radius: px_rem(4px);
+  width: px_rem(300px);
+  height: px_rem(200px);
+  @include media-q(sm) {
+    width: 50%;
+  }
+}
+
+.trending__details {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.trending__article {
+  display: grid;
+}

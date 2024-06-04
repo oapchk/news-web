@@ -21,7 +21,7 @@ const Tooltip = ({ content, children, className }) => {
 };
 
 Tooltip.propTypes = {
-  content: PropTypes.string.isRequired,
+  content: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };

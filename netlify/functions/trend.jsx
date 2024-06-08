@@ -1,16 +1,6 @@
-import express from "express";
 import axios from "axios";
-import cors from "cors";
 
-const app = express();
-const port = 3001;
-
-const corsOptions = {
-  origin: ["http://localhost:5173", "https://news-frontend.netlify.app"],
-};
-
-app.use(cors(corsOptions));
-app.get("/trending", async (req, res) => {
+exports.handler = async (event, context) => {
   try {
     const response = await axios.get("https://newsapi.org/v2/everything", {
       params: {
@@ -22,13 +12,15 @@ app.get("/trending", async (req, res) => {
       },
     });
     console.log("Backend data:", response.data);
-    res.json(response.data.articles);
+    return {
+      statusCode: 200,
+      body: JSON.stringify(response.data.articles),
+    };
   } catch (error) {
     console.error("Error fetching articles:", error);
-    res.status(500).json({ error: "Error fetching articles" });
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: "Error fetching articles" }),
+    };
   }
-});
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+};

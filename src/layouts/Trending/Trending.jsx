@@ -11,9 +11,7 @@ const Trending = () => {
   useEffect(() => {
     const getArticles = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/trending", {
-          mode: "cors",
-        });
+        const response = await axios.get("/.netlify/functions/trend");
         console.log(response.data);
         setArticles(response.data);
       } catch (error) {

@@ -1,6 +1,11 @@
+import express, { Router } from "express";
+import serverless from "serverless-http";
 import axios from "axios";
 
-exports.handler = async (event, context) => {
+const app = express();
+const router = Router();
+
+router.get("/trending", async (req, res) => {
   try {
     const response = await axios.get("https://newsapi.org/v2/everything", {
       params: {
@@ -11,16 +16,13 @@ exports.handler = async (event, context) => {
         apiKey: "23bdd785bf37417593f01b78b4c57a10",
       },
     });
-    console.log("Backend data:", response.data);
-    return {
-      statusCode: 200,
-      body: JSON.stringify(response.data.articles),
-    };
+    res.json(response.data.articles);
   } catch (error) {
     console.error("Error fetching articles:", error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: "Error fetching articles" }),
-    };
+    res.status(500).json({ error: "Error fetching articles" });
   }
-};
+});
+
+app.use("/.netlify/functions/api", router);
+
+export const handler = serverless(app);

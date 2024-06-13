@@ -6,7 +6,7 @@
 // const port = 3001;
 
 // const corsOptions = {
-//   origin: ["http://localhost:5173", "https://news-frontend.netlify.app"],
+//   origin: "http://localhost:5173",
 // };
 
 // app.use(cors(corsOptions));

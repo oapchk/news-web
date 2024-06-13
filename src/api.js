@@ -1,9 +1,28 @@
 import express, { Router } from "express";
 import serverless from "serverless-http";
 import axios from "axios";
+import cors from "cors";
 
 const app = express();
 const router = Router();
+
+const allowedDomains = [
+  "http://localhost:5173",
+  "https://news-frontend.netlify.app",
+];
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedDomains.indexOf(origin) === -1) {
+        const msg =
+          "The CORS policy for this site does not allow access from the specified Origin.";
+        return callback(new Error(msg), false);
+      }
+      return callback(null, true);
+    },
+  })
+);
 
 router.get("/trending", async (req, res) => {
   try {

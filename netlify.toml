@@ -1,6 +1,5 @@
 [build]
   functions = "functions"
-  node_bundler = "esbuild"
 
 
 [[redirects]]
@@ -9,7 +8,3 @@
   status = 200
 
 
-#[[redirects]]
-  #  from = "/*"
-  #  to = "/index.html"
-  #  status = 200

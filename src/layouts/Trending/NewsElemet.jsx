@@ -1,6 +1,7 @@
 import "./Trending.scss";
 import PropTypes from "prop-types";
-
+import { IoIosAddCircleOutline } from "react-icons/io";
+import Tooltip from "../../components/Tooltip/Tooltip";
 const NewsElemet = ({
   title,
   description,
@@ -15,16 +16,28 @@ const NewsElemet = ({
   })} ${date.getFullYear()}`;
   return (
     <div className="trending__article">
-      <div className="trending-n">
-        <p className="trending-source">{source}</p>
-        <p className="">{formattedDate}</p>
+      <div className="trending__img">
+        <img className="trending-img" src={urlToImage} alt={urlToImage} />
       </div>
-      <img className="trending__img" src={urlToImage} alt={urlToImage} />
-      <div className="trending__details">
-        <h2 className="">
-          <a href={url}>{title}</a>
-        </h2>
-        <p className="trending-description">{description}</p>
+
+      <div className="trending__card">
+        <div className="trending-header">
+          <h3 className="trending-header__title">
+            <a href={url}>{title}</a>
+          </h3>
+          <p className="trending-header__body">{description}</p>
+        </div>
+        <div className="trending-source">
+          <div className="">
+            <p className="trending-source__name">{source}</p>
+            <p className="trending-source__date">{formattedDate}</p>
+          </div>
+          <button className="article__icons--btn">
+            <Tooltip content={"Save"}>
+              <IoIosAddCircleOutline />
+            </Tooltip>
+          </button>
+        </div>
       </div>
     </div>
   );

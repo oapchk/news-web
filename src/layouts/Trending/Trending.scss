@@ -11,35 +11,59 @@
   &__main {
     display: flex;
     flex-direction: column;
-    gap: px_rem(32px);
+    gap: px_rem(24px);
     padding-top: px_rem(64px);
+    align-items: center;
+    @media screen and (min-width: 750px) {
+      align-items: flex-start;
+    }
+  }
+  &__article {
+    max-width: px_rem(400px);
+    gap: px_rem(16px);
+    display: flex;
+    background-color: var(--bg-search);
+    padding: px_rem(16px);
+    border-radius: px_rem(5px);
+    flex-direction: column;
+    @media screen and (min-width: 750px) {
+      flex-direction: row;
+      max-width: 100%;
+      background-color: transparent;
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media screen and (min-width: 750px) {
+      border-bottom: solid px_rem(1px) var(--text-primary);
+      flex: 0 0 50%;
+    }
+  }
+  &__img {
+    flex: 0 0 50%;
   }
 }
 
-.trending__img {
-  border-radius: px_rem(15px);
-  width: px_rem(300px);
-  height: px_rem(200px);
-  @include media-q(sm) {
-    width: 50%;
-  }
-}
-.trending-n {
-  flex: 0 0 15%;
-}
-.trending__article {
-  display: flex;
-  gap: px_rem(16px);
-  padding-bottom: px_rem(24px);
-  &:first-child {
-    display: none;
-  }
-}
+.trending-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: px_rem(4px);
+  margin-inline: auto;
 
-.trending__details {
-  border-bottom: solid px_rem(1px) var(--text-primary);
-  flex: 0 0 50%;
+  @media screen and (min-width: 750px) {
+    height: px_rem(340px);
+  }
 }
+// .trending-source {
+//   flex: 0 0 15%;
+// }
+
+// .trending-header__body {
+//   flex: 0 0 50%;
+// }
+
 .trending {
   &-hdl {
     margin-bottom: px_rem(8px);
@@ -47,8 +71,26 @@
   }
 }
 .trending-source {
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
   font-size: px_rem(14px);
+  @media screen and (min-width: 750px) {
+    padding-bottom: px_rem(16px);
+  }
+  &__name {
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+}
+
+.trending-header__body {
+  display: none;
+  @media screen and (min-width: 1000px) {
+    display: block;
+  }
+}
+
+.trending-header__title {
+  padding-bottom: px_rem(36px);
 }

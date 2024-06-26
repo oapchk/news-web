@@ -25,18 +25,10 @@ app.use(
 
 router.get("/trending", async (req, res) => {
   const API_NEWS = process.env.API_NEWS;
-  const url = `https://newsapi.org/v2/everything?q=frontend OR javascript OR reactjs OR UX OR css OR accesibility OR webdevelopment OR webdesign OR UI OR design&language=en&searchIn=title&excludeDomains=removed.com,abduzeedo.com,lannonbr.com,yuanchuan.dev&apiKey=${API_NEWS}`;
+  const url = `https://newsapi.org/v2/everything?q=frontend OR javascript OR reactjs OR UX OR css OR accesibility OR webdevelopment OR webdesign OR UI&language=en&searchIn=title&excludeDomains=bbc.com,removed.com,abduzeedo.com,lannonbr.com,yuanchuan.dev&apiKey=${API_NEWS}`;
   try {
     const response = await axios.get(url);
-    // const response = await axios.get("https://newsapi.org/v2/everything", {
-    //   params: {
-    //     q: "frontend OR javascript OR reactjs OR UX OR css OR accesibility OR webdevelopment OR webdesign OR UI OR design",
-    //     language: "en",
-    //     searchIn: "title",
-    //     excludeDomains: "removed.com,abduzeedo.com,lannonbr.com,yuanchuan.dev",
-    //     apiKey: "API_NEWS",
-    //   },
-    // });
+
     res.json(response.data.articles);
   } catch (error) {
     console.error("Error fetching articles:", error);

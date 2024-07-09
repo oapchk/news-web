@@ -5,8 +5,9 @@ import {
   createUserWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import { auth } from "./../firebase.js";
+import { auth, db } from "./../firebase.js";
 import PropTypes from "prop-types";
+import { collection, addDoc, getDocs, query, where } from "firebase/firestore";
 
 const AuthContext = createContext();
 
@@ -30,7 +31,6 @@ export const AuthProvider = ({ children }) => {
   const signup = async (name, email, password) => {
     const userCredential = await createUserWithEmailAndPassword(
       auth,
-
       email,
       password
     );
@@ -53,11 +53,35 @@ export const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
+  const saveArticle = async (article) => {
+    if (!currentUser) return;
+    try {
+      await addDoc(collection(db, "wishlists"), {
+        uid: currentUser.uid,
+        article,
+      });
+    } catch (error) {
+      console.error("Error adding article to wishlist:", error);
+    }
+  };
+
+  const getWishlist = async () => {
+    if (!currentUser) return [];
+    const q = query(
+      collection(db, "wishlists"),
+      where("uid", "==", currentUser.uid)
+    );
+    const querySnapshot = await getDocs(q);
+    return querySnapshot.docs.map((doc) => doc.data().article);
+  };
+
   const value = {
     currentUser,
     signup,
     login,
     logout,
+    saveArticle,
+    getWishlist,
   };
 
   return (

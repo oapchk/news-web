@@ -1,7 +1,9 @@
 import "./Trending.scss";
+import { useAuth } from "../../context/AuthContext";
 import PropTypes from "prop-types";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import Tooltip from "../../components/Tooltip/Tooltip";
+
 const NewsElemet = ({
   title,
   description,
@@ -10,10 +12,31 @@ const NewsElemet = ({
   source,
   publishedAt,
 }) => {
+  const { currentUser, saveArticle } = useAuth();
+
   const date = new Date(publishedAt);
   const formattedDate = `${date.getDate()} ${date.toLocaleString("default", {
     month: "long",
   })} ${date.getFullYear()}`;
+
+  //add to wishlist
+
+  const saveArticleToWishlist = async () => {
+    if (!currentUser) {
+      alert("Please log in to save articles to your wishlist.");
+      return;
+    }
+    const article = {
+      title,
+      description,
+      url,
+      urlToImage,
+      source,
+      publishedAt,
+    };
+    await saveArticle(article);
+    console.log("Article saved:", title);
+  };
   return (
     <div className="trending__article">
       <div className="trending__img">
@@ -32,7 +55,10 @@ const NewsElemet = ({
             <p className="trending-source__name">{source}</p>
             <p className="trending-source__date">{formattedDate}</p>
           </div>
-          <button className="article__icons--btn">
+          <button
+            className="article__icons--btn"
+            onClick={saveArticleToWishlist}
+          >
             <Tooltip content={"Save"}>
               <IoIosAddCircleOutline />
             </Tooltip>

@@ -8,6 +8,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 import Footer from "./layouts/Footer/Footer";
 import Main from "./layouts/Main/Main";
 import Navbar from "./layouts/Navbar/Navbar";
+import Wishlist from "./layouts/Wishlist/Wishlist";
 import Trending from "./layouts/Trending/Trending";
 import "./sass/variables.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -26,6 +27,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/trending" element={<Trending />} />
+              <Route path="/wishlist" element={<Wishlist />} />
             </Routes>
             <Footer />
           </Router>

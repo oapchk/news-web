@@ -1,0 +1,12 @@
+@import "../../sass/helpers/functions.scss";
+@import "../../sass/variables.scss";
+@import "../../App.scss";
+@import "../../sass/helpers/mixins.scss";
+
+.wishlist {
+  max-width: px_rem(1000px);
+  margin: auto;
+  padding-block: px_rem(64px);
+  &__newselement {
+  }
+}

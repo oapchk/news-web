@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import NewsElemet from "./NewsElemet";
 import "./Trending.scss";
 import { useTheme } from "../../context/ThemeContext";
@@ -8,41 +8,54 @@ const Trending = () => {
   const [articles, setArticles] = useState([]);
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
+  const observerTarget = useRef(null);
+
   const { theme } = useTheme();
 
+  const getArticles = async (page) => {
+    setIsLoading(true);
+    try {
+      const response = await axios.get(
+        `/.netlify/functions/api/trending?page=${page}&limit=10`,
+        {
+          mode: "cors",
+        }
+      );
+      console.log(response.data);
+      setArticles((prevArticles) => [...prevArticles, ...response.data]);
+    } catch (error) {
+      console.error("Error fetching articles:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   useEffect(() => {
-    const getArticles = async () => {
-      try {
-        const response = await axios.get(
-          "/.netlify/functions/api/trending?page=${page}&limit=10",
-          {
-            mode: "cors",
-          }
-        );
-        console.log(response.data);
-        setArticles((prevArticles) => [...prevArticles, ...response.data]);
-      } catch (error) {
-        console.error("Error fetching articles:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    getArticles();
+    getArticles(page);
   }, [page]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (
-        window.innerHeight + document.documentElement.scrollTop ===
-        document.documentElement.offsetHeight
-      ) {
-        setPage((prevPage) => prevPage + 1);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setPage((prevPage) => prevPage + 1);
+        }
+      },
+      { threshold: 1 }
+    );
+
+    const target = observerTarget.current;
+    if (target) {
+      observer.observe(target);
+    }
+
+    return () => {
+      if (target) {
+        observer.unobserve(target);
       }
     };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <div className={`trending`} data-theme={theme}>
       <div className="trending__headline">
@@ -63,6 +76,7 @@ const Trending = () => {
           );
         })}
         {isLoading && <p>Loading more articles...</p>}
+        <div ref={observerTarget} className="loader"></div>
       </div>
     </div>
   );

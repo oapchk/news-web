@@ -39,6 +39,12 @@ const NewsElemet = ({
   };
   return (
     <div className="trending__article">
+      <div className="trending-source">
+        <div className="">
+          <p className="trending-source__name">{source}</p>
+          <p className="trending-source__date">{formattedDate}</p>
+        </div>
+      </div>
       <div className="trending__img">
         <img className="trending-img" src={urlToImage} alt={urlToImage} />
       </div>
@@ -50,20 +56,11 @@ const NewsElemet = ({
           </h3>
           <p className="trending-header__body">{description}</p>
         </div>
-        <div className="trending-source">
-          <div className="">
-            <p className="trending-source__name">{source}</p>
-            <p className="trending-source__date">{formattedDate}</p>
-          </div>
-          <button
-            className="article__icons--btn"
-            onClick={saveArticleToWishlist}
-          >
-            <Tooltip content={"Save"}>
-              <IoIosAddCircleOutline />
-            </Tooltip>
-          </button>
-        </div>
+        <button className="article__icons--btn" onClick={saveArticleToWishlist}>
+          <Tooltip content={"Save"}>
+            <IoIosAddCircleOutline />
+          </Tooltip>
+        </button>
       </div>
     </div>
   );

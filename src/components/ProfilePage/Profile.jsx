@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 useAuth;
 import "./Profile.scss";
@@ -24,12 +24,19 @@ const Profile = () => {
   return (
     <div className="profile">
       <div className="profile__main">
-        <h2>Welcome, {currentUser.email}</h2>
+        <div className="">
+          <h2>Welcome, {currentUser.email}</h2>
+        </div>
+
         <div className="form-row--button">
           <button className="login-button btn" onClick={handleLogout}>
             Logout
           </button>
         </div>
+
+        <NavLink className="login-bottom--text" to="/wishlist">
+          Go to wishlist
+        </NavLink>
       </div>
     </div>
   );

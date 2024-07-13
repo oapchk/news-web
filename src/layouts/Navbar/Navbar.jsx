@@ -3,7 +3,7 @@ import Searchbar from "../../components/Searchbar/Searchbar";
 import { FaRegUser, FaRegSun, FaRegMoon } from "react-icons/fa";
 import { useTheme } from "../../context/ThemeContext";
 import Tooltip from "../../components/Tooltip/Tooltip";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 
 const Navbar = () => {
@@ -41,7 +41,9 @@ const Navbar = () => {
                 <div>
                   {currentUser ? (
                     <>
-                      <p>Welcome, {currentUser.email}</p>
+                      <NavLink to="/profile">
+                        Welcome, {currentUser.email}
+                      </NavLink>
                       <button
                         className="navbar__item--btn btn"
                         onClick={handleLogout}

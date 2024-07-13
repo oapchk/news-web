@@ -2,6 +2,8 @@ import "./Trending.scss";
 import { useAuth } from "../../context/AuthContext";
 import PropTypes from "prop-types";
 import { IoIosAddCircleOutline } from "react-icons/io";
+import { MdDeleteOutline } from "react-icons/md";
+
 import Tooltip from "../../components/Tooltip/Tooltip";
 
 const NewsElemet = ({
@@ -56,7 +58,10 @@ const NewsElemet = ({
           </h3>
           <p className="trending-header__body">{description}</p>
         </div>
-        <button className="article__icons--btn" onClick={saveArticleToWishlist}>
+        <button
+          className="trending__icons--btn"
+          onClick={saveArticleToWishlist}
+        >
           <Tooltip content={"Save"}>
             <IoIosAddCircleOutline />
           </Tooltip>

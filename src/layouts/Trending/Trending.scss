@@ -27,8 +27,11 @@
     background-color: var(--bg-search);
     padding: px_rem(16px);
     border-radius: px_rem(5px);
-    // flex-direction: column;
-    @media screen and (min-width: 750px) {
+    // @include media-q(sm) {
+    //   display: flex;
+    //   flex-direction: column;
+    // }
+    @media screen and (min-width: 577px) {
       flex-direction: row;
       max-width: 100%;
       background-color: transparent;
@@ -37,12 +40,15 @@
   &__card {
     grid-column: 7/13;
     grid-row: 1/5;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    @media screen and (min-width: 750px) {
+    @include media-q(sm) {
+      display: grid;
+      grid-column: 1/13;
+      grid-row: 1/2;
+    }
+    @media screen and (min-width: 577px) {
       border-bottom: solid px_rem(1px) var(--text-primary);
     }
   }
@@ -52,6 +58,12 @@
     @media screen and (max-width: 950px) {
       grid-column: 1/7;
     }
+    @include media-q(sm) {
+      grid-column: 1/13;
+      grid-row: 2/3;
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 
@@ -60,9 +72,11 @@
   height: auto;
   border-radius: px_rem(4px);
   margin-inline: auto;
-
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 577px) {
     height: px_rem(340px);
+  }
+  @include media-q(sm) {
+    height: px_rem(200px);
   }
 }
 .trending-source {
@@ -74,6 +88,11 @@
     grid-column: 7/10;
     grid-row: 4/5;
   }
+  @include media-q(sm) {
+    font-size: px_rem(12px);
+    grid-column: 1/10;
+    grid-row: 3/4;
+  }
 }
 
 .trending {
@@ -83,7 +102,7 @@
   }
 }
 .trending-source {
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 577px) {
     padding-bottom: px_rem(16px);
   }
   &__name {
@@ -93,20 +112,30 @@
   }
 }
 
-.trending-header__body {
-  display: none;
-  @media screen and (min-width: 950px) {
-    display: block;
+.trending-header {
+  display: grid;
+  &__body {
+    display: none;
+    @media screen and (min-width: 950px) {
+      display: block;
+    }
   }
 }
 
 .trending-header__title {
   padding-bottom: px_rem(36px);
-  font-size: max(2vw, 28px);
+  font-size: max(3vw, 16px);
+  @include media-q(sm) {
+    padding-bottom: 0;
+  }
 }
 
-.article__icons--btn {
+.trending__icons--btn {
   display: flex;
   justify-content: flex-end;
   padding-bottom: px_rem(16px);
+  @include media-q(sm) {
+    grid-column: 11/13;
+    grid-row: 1/2;
+  }
 }

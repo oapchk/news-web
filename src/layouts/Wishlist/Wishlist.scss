@@ -7,6 +7,19 @@
   max-width: px_rem(1000px);
   margin: auto;
   padding-block: px_rem(64px);
-  &__newselement {
+  &__article {
+    display: flex;
+    flex: 0 0 45%;
+  }
+  &__img {
+    flex: 0 0 50%;
+  }
+}
+
+.article {
+  &-img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
   }
 }

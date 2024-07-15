@@ -134,6 +134,8 @@
   display: flex;
   justify-content: flex-end;
   padding-bottom: px_rem(16px);
+  border: none;
+  font-size: px_rem(24px);
   @include media-q(sm) {
     grid-column: 11/13;
     grid-row: 1/2;

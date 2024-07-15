@@ -7,7 +7,15 @@ import {
 } from "firebase/auth";
 import { auth, db } from "./../firebase.js";
 import PropTypes from "prop-types";
-import { collection, addDoc, getDocs, query, where } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  where,
+  doc,
+  deleteDoc,
+} from "firebase/firestore";
 
 const AuthContext = createContext();
 
@@ -65,6 +73,25 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const deleteArticle = async (articleUrl) => {
+    if (!currentUser) return;
+    try {
+      const q = query(
+        collection(db, "wishlists"),
+        where("uid", "==", currentUser.uid),
+        where("article.url", "==", articleUrl)
+      );
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach(async (docSnapshot) => {
+        const docRef = doc(db, "wishlists", docSnapshot.id);
+        await deleteDoc(docRef);
+      });
+      console.log("Article deleted:", articleUrl);
+    } catch (error) {
+      console.error("Error deleting article from wishlist:", error);
+    }
+  };
+
   const getWishlist = async () => {
     if (!currentUser) return [];
     const q = query(
@@ -81,6 +108,7 @@ export const AuthProvider = ({ children }) => {
     login,
     logout,
     saveArticle,
+    deleteArticle,
     getWishlist,
   };
 

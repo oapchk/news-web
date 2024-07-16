@@ -4,15 +4,37 @@
 @import "../../sass/helpers/mixins.scss";
 
 .wishlist {
-  max-width: px_rem(1000px);
-  margin: auto;
-  padding-block: px_rem(64px);
+  &__main {
+    max-width: px_rem(1300px);
+    margin: auto;
+    padding-block: px_rem(64px);
+    padding-inline: px_rem(16px);
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+  }
   &__article {
     display: flex;
-    flex: 0 0 45%;
+    gap: px_rem(8px);
+  }
+  &__list {
+    max-width: px_rem(800px);
+    display: flex;
+    flex-direction: column;
+    gap: px_rem(16px);
   }
   &__img {
-    flex: 0 0 50%;
+    flex: 0 0 30%;
+  }
+  &__btn {
+    border: none;
+    font-size: 24px;
+    flex: 0 0 10%;
+  }
+  &__title {
+    align-content: center;
+    flex: 0 0 60%;
   }
 }
 
